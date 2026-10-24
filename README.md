@@ -105,3 +105,9 @@ Kerangka kerjanya (draf, audit, revisi akhir) diwarisi dari skill `humanizer`
 berbahasa Inggris. Katalog polanya disusun ulang sepenuhnya untuk bahasa Indonesia,
 karena pola khas tulisan AI dalam bahasa Indonesia berbeda jauh dari pola dalam bahasa
 Inggris.
+
+## Lisensi
+
+[MIT](LICENSE). Anda bebas memakai, menyalin, mengubah, dan menyebarkan skill ini,
+termasuk mengganti preset suaranya, selama pemberitahuan hak cipta dan lisensi tetap
+disertakan.
