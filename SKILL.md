@@ -30,8 +30,10 @@ KBBI), karena *kalkir* adalah kertas jiplak dan bukan istilah linguistik. Versi 
 menambah enam baris tabel kalke, melarang kalimat penutup berbentuk punchline atau
 paralelisme retoris, menegaskan bahwa kalimat pendek boleh disambung kata penghubung,
 menambah larangan *Konsekuensinya* dan *Sedangkan* di awal kalimat, serta menambah aturan
-register santai, glosarium akronim pada kemunculan pertama, dan *dapat* pada klaim
-kemampuan. Seluruhnya lahir dari empat latihan menulis yang dikoreksi langsung oleh
+register santai, glosarium akronim pada kemunculan pertama, *dapat* pada klaim kemampuan,
+larangan pola penyangkalan *X, bukan berarti Y*, dan *membahas* sebagai pengganti
+*mengupas* pada register akademik. Pola penyangkalan kini juga dihitung oleh
+`scripts/metrik.py`. Seluruhnya lahir dari empat latihan menulis yang dikoreksi langsung oleh
 penulis pada 24 Oktober 2026: komentar media sosial tentang perubahan iklim, penjelasan
 santai tentang fuel cell, esai akademik tentang reaktor cepat berpendingin timbal, dan
 esai akademik tentang mobil listrik.
@@ -247,8 +249,9 @@ keadaan awal.
 
 ### Langkah 5c. Uji personifikasi, register, dan pembuka kalimat (WAJIB)
 
-Tiga tell ini tidak terlihat oleh `scripts/metrik.py` sama sekali, dan ketiganya adalah
-penanda paling kentara bahwa sebuah teks teknis ditulis model.
+Tiga tell pertama tidak terlihat oleh `scripts/metrik.py` sama sekali, dan ketiganya
+adalah penanda paling kentara bahwa sebuah teks teknis ditulis model. Tell keempat
+dihitung oleh skrip sejak versi 1.6.
 
 **1. Benda mati tidak punya watak.** Model, program, persamaan, algoritma, dan data
 tidak malas, tidak berani, tidak cerewet, tidak tahu, dan tidak sakit. Ganti dengan
@@ -283,6 +286,7 @@ dilarang adalah watak, niat, dan emosi yang diberikan kepada benda mati.
 | wajah bias tinggi | indikator karakteristik bias tinggi |
 | berayun dari 60 sampai 78 | berfluktuasi antara 60 hingga 78 |
 | menghamburkan waktu tanpa hasil | konvergensi terlalu lambat untuk anggaran epoch yang tersedia |
+| mengupas, mengupas tuntas | membahas, menguraikan |
 
 Rambunya sama seperti Langkah 5b, yaitu **jangan menukar frasa kolokial dengan register
 birokratis.** "Beban kerugian berupa waktu kerja personil" tidak lebih baik daripada
@@ -315,6 +319,27 @@ Gantinya bukan menghapus kalimat itu, melainkan menyatukannya dengan kalimat ses
 sehingga gagasannya dibawa oleh satu kalimat penuh. "Prosedurnya begini. Data latih
 dibagi acak menjadi $k$ bagian." menjadi "Pada prosedur ini, himpunan data latih dibagi
 secara acak menjadi $k$ bagian yang berukuran setara."
+
+**4. Penyangkalan antisipatif: *X, bukan berarti Y* dan kerabatnya.** Model gemar
+menyangkal kesimpulan yang tidak pernah diajukan pembaca, lalu menyatakan maksudnya lewat
+kontras. Penulis menilai pola ini sebagai AI slop yang paling mudah dikenali. Bentuknya:
+
+`Ini bukan berarti ...` `Hal ini bukan berarti ...` `X, bukan berarti Y.`
+`bukan sekadar X, melainkan Y` `bukan X, melainkan Y` di ujung kalimat atau paragraf
+
+Tindakannya adalah menghapus penyangkalan itu dan menyatakan isinya secara positif. Bila
+salah paham yang hendak dicegah memang nyata, tulis fakta yang benar sebagai kalimat biasa,
+sebaiknya dengan angka atau rujukan.
+
+> **Sebelum:** Efisiensi motor listrik sangat tinggi. Ini bukan berarti emisinya otomatis
+> rendah.
+>
+> **Sesudah:** Efisiensi motor listrik sangat tinggi, tetapi emisinya tetap bergantung pada
+> sumber listrik yang mengisi baterainya.
+
+Sasarannya nol per dokumen. `scripts/metrik.py` melaporkan jumlahnya pada baris
+Penyangkalan antisipatif beserta contohnya. *tidak berarti* dalam makna statistik
+("perbedaannya tidak berarti") tidak dihitung dan tidak perlu disunting.
 
 ### Langkah 5d. Fusi kalimat terfragmentasi
 

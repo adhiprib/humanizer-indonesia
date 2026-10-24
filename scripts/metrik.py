@@ -2,6 +2,9 @@
 """
 metrik.py - pengukur gaya teks bahasa Indonesia untuk skill humanizer-indonesia.
 
+Versi 1.3 (skill 1.6) menambah baris diagnostik penyangkalan antisipatif, yaitu pola
+"bukan berarti" dan "bukan X, melainkan Y", dengan sasaran nol.
+
 Versi 1.2. Ambang dikalibrasi ulang dari rentang korpus yang sebenarnya, bukan dari
 target ideal. Kalibrasi 1.0 dan 1.1 memakai target yang lebih ketat daripada tulisan
 penulis sendiri, dan potongan tulisan manusianya gagal di empat baris. Lihat bagian 1
@@ -47,6 +50,12 @@ FRASA_KOSONG = [
     "aspek vital", "tak lepas dari", "semakin krusial", "patut diperhatikan",
     "di era", "seiring dengan perkembangan", "dapat disimpulkan bahwa",
 ]
+
+# Penyangkalan antisipatif (ditambahkan versi 1.3 skrip, skill 1.6). 'tidak berarti'
+# sengaja tidak dihitung karena sah dalam makna statistik.
+POLA_SANGKAL = re.compile(
+    r"\bbukan\s+berarti\b|\bbukan\s+sekadar\b[^.]{0,80}?\bmelainkan\b"
+    r"|\bbukan\s+[^.,]{1,60},\s*melainkan\b", re.I)
 
 PEMBUKA_KONEKTOR = ("namun", "selain itu", "akan tetapi", "tetapi", "sedangkan",
                     "meski", "walaupun", "oleh karena", "dengan demikian",
@@ -168,6 +177,8 @@ def ukur(teks):
         "dimana": len(re.findall(r"\bdimana\b", low)),
         "yang_mana": len(re.findall(r"\byang mana\b", low)),
         "frasa_kosong": sum(low.count(f) for f in FRASA_KOSONG),
+        "sangkal": len(POLA_SANGKAL.findall(body)),
+        "contoh_sangkal": [x.group(0) for x in POLA_SANGKAL.finditer(body)][:3],
         "dash": body.count("\u2014") + len(re.findall(r"(?<!\d)\u2013|\u2013(?!\d)", body)),
         "en_rentang": len(re.findall(r"\d\s?\u2013\s?\d", body)),
         "pemadat": len(PEMADAT.findall(body)) / kata * 1000,
@@ -215,6 +226,9 @@ def cetak(m, nama_preset):
     print("  Enumerasi %d, rujukan 'seperti yang' %d (rujukan tidak disunting)" % (m["n_enum"], m["n_rujukan"]))
     print("  dimana %d, yang mana %d" % (m["dimana"], m["yang_mana"]))
     print("  Frasa kosong terdeteksi: %d" % m["frasa_kosong"])
+    print("  Penyangkalan antisipatif (bukan berarti, bukan X melainkan Y): %d   sasaran 0" % m["sangkal"])
+    for c in m["contoh_sangkal"]:
+        print("    > %s" % c)
     print("  En dash sebagai rentang angka: %d (tidak dihitung pelanggaran)" % m["en_rentang"])
     print("  Kepadatan kata pemadat: %.1f per 1.000 kata" % m["pemadat"])
     print("    Korpus penulis berkisar 73 sampai 139. Tanpa ambang, dan BUKAN sasaran.")

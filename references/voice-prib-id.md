@@ -14,7 +14,7 @@ Aturan format mutlak: keluaran **tidak boleh memuat em dash (U+2014) maupun en d
 **Aturan korpus yang mengikat.** Penulis mulai memakai bantuan AI dalam penulisan setelah
 2022. Dokumen bertahun 2023 ke atas **tidak boleh dipakai sebagai patokan suara** kecuali
 penulis menyatakan secara eksplisit bahwa bagian tertentu ditulis tanpa bantuan. Tahun
-terbit karena itu bukan sekadar metadata, melainkan syarat kelayakan.
+terbit karena itu menjadi syarat kelayakan.
 
 ### Tingkat kepercayaan menurut asal
 
@@ -396,6 +396,8 @@ kemunculannya berarti sisipan model.
 | Dokumen sebagai pelaku (*Tulisan ini membahas*) | *Pada tulisan ini kita akan membahas* |
 | Kiasan halus (*paling kokoh*, *menyempit*, *terjawab*, *dipinjam*) | kata teknis yang literal (2.17) |
 | Kontras *bukan X* di ujung kalimat | hapus, atau jadikan kalimat tersendiri bila memang penting |
+| Penyangkalan antisipatif (*X, bukan berarti Y*; *bukan sekadar X, melainkan Y*) | nyatakan isinya secara positif |
+| *mengupas* pada register akademik | *membahas* atau *menguraikan* |
 | Kata santai pada penghubung (*kayak*, *sama*, *jadi*) dalam teks santai | *seperti*, *dan*, *sehingga* |
 
 **Koreksi terhadap versi awal.** Versi 1.0 menyatakan bahwa kalimat berjalin longgar

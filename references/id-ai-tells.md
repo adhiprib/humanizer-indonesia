@@ -113,6 +113,9 @@ utama*, *menjadi faktor kunci*, *berperan vital*, *aspek vital*, *tak lepas dari
 
 Uji: hapus frasanya. Bila maknanya utuh, buang.
 
+Pada register akademik, *mengupas* dan *mengupas tuntas* bernada jurnalistik. Pakai
+*membahas* atau *menguraikan*.
+
 ### B3. Kosakata bergengsi tanpa fungsi
 
 *mengoptimalkan* (untuk hal yang tidak dioptimasi), *mengimplementasikan* (untuk
@@ -207,6 +210,14 @@ Ambang: lebih dari 1 enumerasi *seperti* per 1.000 kata sudah di atas kebiasaan 
 Tiap paragraf dibuka kalimat tesis eksplisit, lalu tiga kalimat pendukung, lalu kalimat
 simpul. Polanya terlalu rapi. Manusia sering langsung masuk ke detail dan membiarkan
 kesimpulannya tersirat.
+
+### D7. Penyangkalan antisipatif
+
+Pola *X, bukan berarti Y*, *Ini bukan berarti ...*, *bukan sekadar X, melainkan Y*, dan
+*bukan X, melainkan Y* di ujung kalimat. Teks model menyangkal kesimpulan yang tidak pernah
+diajukan pembaca, lalu menyelipkan maksud sebenarnya lewat kontras. Penulis menilai pola ini
+sebagai AI slop yang paling mudah dikenali (24 Oktober 2026). Nyatakan isinya secara
+positif. Sasaran nol per dokumen, dan `scripts/metrik.py` menghitungnya.
 
 ### D6. Penomoran dan bullet yang tidak perlu
 
