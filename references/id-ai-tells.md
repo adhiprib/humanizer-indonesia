@@ -56,7 +56,7 @@ Gambar 3.
 
 ### A3. *yang mana* dan *dimana* sebagai pronomina relatif
 
-Keduanya kalkir dari *which* dan *where*. Dalam bahasa Indonesia baku, *yang mana* hanya
+Keduanya kalke dari *which* dan *where*. Dalam bahasa Indonesia baku, *yang mana* hanya
 sah dalam kalimat tanya pilihan ("Yang mana yang Anda pilih?"), dan *di mana* hanya sah
 sebagai keterangan tempat yang sesungguhnya, ditulis terpisah.
 

@@ -5,7 +5,7 @@ description: "Menyunting teks bahasa Indonesia agar tidak terbaca sebagai tulisa
 
 # Humanizer Indonesia
 
-**Versi 1.5, 9 September 2026.** Untuk memastikan versi mana yang aktif, tanya saja
+**Versi 1.6, 24 Oktober 2026.** Untuk memastikan versi mana yang aktif, tanya saja
 "humanizer-indonesia versi berapa" dan jawabannya diambil dari baris ini.
 
 Riwayat singkat. 1.0 rilis awal. 1.1 memperbaiki deteksi verba ringan dan menambah
@@ -14,7 +14,7 @@ sebenarnya, setelah terbukti ambang 1.0 dan 1.1 menghukum tulisan manusia penuli
 sendiri, dan menetapkan bahwa suara penulis menang atas skor detektor. 1.3 menegaskan
 posisi skill sebagai penyiap draf untuk disunting manusia, melengkapi matriks bukti
 detektor tujuh pengukuran, dan mengoreksi rentang diagnostik kepadatan pemadat ke 73
-sampai 139. 1.4 menambahkan Langkah 5b tentang kalkir dan diksi sebagai langkah wajib,
+sampai 139. 1.4 menambahkan Langkah 5b tentang kalke dan diksi sebagai langkah wajib,
 setelah satu bab diktat lulus sembilan dari sembilan metrik tetapi tetap terbaca sebagai
 terjemahan, dan menambahkan bagian kaidah yang sering terlewat setelah aturan tanda
 pisah terbukti keliru diterapkan sampai menghapus tanda hubung pada bentuk ulang.
@@ -25,6 +25,14 @@ pemadat pada Langkah 7 yang masih tertulis 45 padahal seharusnya 73. Seluruh tam
 itu lahir dari perbandingan langsung dua bab diktat versi Claude lawan versi Gemini pada
 9 September 2026, ketika penulis menilai bahasa Indonesia versi Gemini lebih baik
 sedangkan versi Gemini ternyata menghapus rujukan silang dan angka terverifikasi.
+1.6 membetulkan nama langkah dari *kalke* menjadi *kalke* (sinonim *pinjam terjemah*,
+KBBI), karena *kalke* adalah kertas jiplak dan bukan istilah linguistik. Versi ini juga
+menambah lima baris tabel kalke, melarang kalimat penutup berbentuk punchline atau
+paralelisme retoris, menegaskan bahwa kalimat pendek boleh disambung kata penghubung,
+menambah larangan *Konsekuensinya* dan *Sedangkan* di awal kalimat, serta menambah aturan
+register santai. Seluruhnya lahir dari tiga latihan menulis yang dikoreksi langsung oleh
+penulis pada 24 Oktober 2026: komentar media sosial tentang perubahan iklim, penjelasan
+santai tentang fuel cell, dan esai akademik tentang reaktor cepat berpendingin timbal.
 
 Skill ini menyunting teks berbahasa Indonesia agar terbaca sebagai tulisan manusia,
 bukan keluaran model. Kerangka kerjanya diwarisi dari skill `humanizer`, yaitu putaran
@@ -96,7 +104,7 @@ wajib, dan lulus seluruh metrik tidak pernah menjadi alasan untuk melewatinya.**
 
 **Kekakuan teks Indonesia jarang berasal dari kesalahan tata bahasa.** Hampir selalu
 penyebabnya enam hal: kepadatan nominalisasi, kohesi yang digantung pada konektor,
-keseragaman ritme kalimat, kalkir dari bahasa Inggris, personifikasi benda mati beserta
+keseragaman ritme kalimat, kalke dari bahasa Inggris, personifikasi benda mati beserta
 diksi kolokial, dan pembuka kalimat yang berulang dengan pola yang sama. Perbaiki
 keenamnya sebelum menyentuh hal lain.
 
@@ -176,14 +184,14 @@ Tulis draf revisi. Sambil menulis, jaga hal berikut:
 - Informasi lama di awal kalimat, informasi baru di akhir.
 - Setiap klaim berpasangan dengan angka atau rujukan.
 
-### Langkah 5b. Uji kalkir dan diksi (WAJIB)
+### Langkah 5b. Uji kalke dan diksi (WAJIB)
 
 Untuk setiap paragraf, ajukan satu pertanyaan: **kalimat bahasa Inggris apa yang ada di
 balik kalimat ini?** Bila kalimat sumbernya dapat direkonstruksi klausa demi klausa,
 kalimat itu belum ditulis dalam bahasa Indonesia, melainkan dialihbahasakan. Tulis ulang
 gagasannya, bukan urutannya.
 
-Enam pola kalkir yang paling sering muncul, seluruhnya dari kasus nyata:
+Pola kalke yang paling sering muncul, seluruhnya dari kasus nyata:
 
 | Pola | Contoh buruk | Perbaikan |
 |---|---|---|
@@ -193,12 +201,20 @@ Enam pola kalkir yang paling sering muncul, seluruhnya dari kasus nyata:
 | Urutan Inggris dipertahankan utuh | mengedarkan produk dan material pada nilai tertingginya | menjaga produk dan material tetap beredar pada nilai tertingginya |
 | Verba dasar diterjemahkan mentah | menghapus limbah (*eliminate*), meregenerasi alam (*regenerate*) | menghilangkan limbah; memulihkan alam |
 | Istilah Inggris dibiarkan telanjang | secara on-demand | sesuai kebutuhan, atau *on demand* dimiringkan dengan padanan dalam kurung |
+| Klausa partisip di depan kalimat | Tinggal di Bogor, saya merasakan (*Living in Bogor, I...*) | Saya tinggal di Bogor dan merasakan |
+| Istilah umum diterjemahkan kata per kata | armada pembangkit (*fleet*), garam lebur (*molten salt*), proyek paling maju (*most advanced*) | unit pembangkit; garam cair; proyek yang paling dekat dengan tahap operasi |
+| Istilah teknis diterjemahkan harfiah | sapuan parameter (*parameter sweep*), skenario patahnya pipa besar (*large break*) | variasi parameter atau studi parametrik; kecelakaan kehilangan pendingin akibat pecahnya pipa berdiameter besar (*large break loss-of-coolant accident*, LB-LOCA) |
+| Idiom Inggris dialihbahasakan | tidak datang tanpa harga (*does not come without a price*), pertama-tama berangkat dari (*first and foremost stems from*) | di balik keunggulan tersebut ada kendala; alasan pertama ... adalah |
+| Dokumen dijadikan pelaku | Tulisan ini membahas (*This paper discusses*) | Pada tulisan ini kita akan membahas |
 
 Tiga teknik yang terbukti mengubah paragraf terjemahan menjadi mengalir:
 
 1. **Daftar didahului titik dua, bukan digantung pada "adalah".** "Enam teknologi
    pemungkin pada Gambar 3.12 adalah A, B, C" menjadi "Gambar 3.12 menyajikan enam
-   teknologi pendukung utama: A, B, C".
+   teknologi pendukung utama: A, B, C". Teknik ini untuk kalimat yang memang kalke dari
+   *are*, bukan untuk menghapus setiap *adalah*. Penulis PRIB justru memakai daftar yang
+   digantung pada *adalah*, terutama pada tulisan pendek (bagian 2.2 dan 2.15
+   `voice-prib-id.md`).
 2. **Biarkan verba bekerja.** Rangkaian *adalah*, *memungkinkan*, *merupakan* diganti
    verba yang menyebut tindakannya: menyajikan, memfasilitasi, merekam, memperpanjang.
 3. **Pilih istilah yang hidup di lapangan.** *manufaktur aditif*, bukan *teknologi
@@ -206,7 +222,7 @@ Tiga teknik yang terbukti mengubah paragraf terjemahan menjadi mengalir:
 
 Empat rambu supaya perbaikan ini tidak berbalik merusak:
 
-- **Jangan menukar kalkir dengan register birokratis.** "Sasaran itu kehilangan
+- **Jangan menukar kalke dengan register birokratis.** "Sasaran itu kehilangan
   instrumen operasionalnya" tidak lebih baik daripada terjemahan harfiah. Sebut tempat
   atau tindakan yang bisa dibayangkan pembaca, misalnya lantai produksi.
 - **Jangan menggabung beberapa kalimat menjadi satu kalimat panjang bertitik koma
@@ -269,6 +285,12 @@ Rambunya sama seperti Langkah 5b, yaitu **jangan menukar frasa kolokial dengan r
 birokratis.** "Beban kerugian berupa waktu kerja personil" tidak lebih baik daripada
 "biaya satu jam kerja teknisi". Yang dibuang nada santainya, bukan bendanya.
 
+Tabel ini berlaku untuk register `akademik` dan `ajar`. Bila penulis memang meminta
+tulisan santai, misalnya komentar media sosial atau penjelasan populer, ikuti bagian 2.13
+`voice-prib-id.md`: kata penghubung dan perbandingan tetap baku (*seperti*, *dan*,
+*sehingga*, *kemudian*), sedangkan unsur santai hanya muncul pada verba dan keterangan
+(*gampangnya*, *nembus*, *muter*, *ga*).
+
 **3. Pembuka kalimat berulang yang monoton.** Model cenderung membuka penjelasan dengan
 kalimat pendek berpola tetap, lalu mengulanginya di tiap subbab. Satu kali tidak jadi
 soal, tetapi lima kali dalam satu bab langsung terbaca sebagai keluaran model.
@@ -280,6 +302,11 @@ Cari pola berikut, lalu pastikan sisanya nol atau satu saja per dokumen:
 `Jawabannya, buang saja.` `Mari kita lihat.` `Mari kita mulai.`
 `Daripada mempercayai uraian itu begitu saja.` `Perhatikan bahwa.`
 `Tiga hal langsung terlihat.` `Ada dua penyakit pokok.` `Seberapa jauh kemampuan X?`
+`Konsekuensinya,` `Di situlah ... yang sebenarnya.`
+
+Penulis menilai *Konsekuensinya* terlalu terasa sebagai keluaran AI. Pakai *Karena itu*
+atau *Akibatnya*, dan jangan membuka dua kalimat berturut-turut dengan penghubung yang
+sama.
 
 Gantinya bukan menghapus kalimat itu, melainkan menyatukannya dengan kalimat sesudahnya
 sehingga gagasannya dibawa oleh satu kalimat penuh. "Prosedurnya begini. Data latih
@@ -351,6 +378,18 @@ klausa relatif, aposisi, atau keterangan sisipan. **Jangan memanjangkan dengan r
 koma dan kata dan**, karena itu cara termalas dan langsung menaikkan baris koordinasi.
 
 Bila kalimat pendek kurang dari 15 persen, tambahkan kalimat pendek penutup paragraf.
+
+**Isi kalimat pendek penutup harus fakta, temuan, atau pengakuan batas, bukan
+punchline.** Aforisme ("Di situlah debat yang sebenarnya"), paralelisme retoris
+("Kendala materialnya juga sama nyatanya"), dan kontras *bukan X, melainkan Y* yang
+ditaruh di ujung paragraf dibuang oleh penulis pada empat dari empat teks latihan
+24 Oktober 2026. Contoh penutup yang dipertahankan: "Efisiensinya sendiri masih rendah."
+
+**Kalimat pendek boleh disambung kata penghubung.** Penulis menolak kalimat pendek yang
+berdiri tiba-tiba, lalu menambahkan *Kemudian*, *Selain itu*, *Namun*, atau *Karena itu*
+di depannya. Tindakan itu sah, dan baris konektor pada skrip metrik tidak boleh
+dijadikan alasan untuk mencopotnya. Pada esai LFR versi penulis, baris itu tetap hanya
+0,11 per 100 kata.
 
 Jangan memangkas kalimat panjang secara menyeluruh. Memecah semuanya justru menurunkan
 simpangan baku, bukan menaikkannya.
@@ -476,6 +515,10 @@ dirumuskan oleh Komisi Eropa, dijanjikan oleh Industri 5.0, dilakukan oleh pemil
 Menurut Tata Bahasa Baku Bahasa Indonesia, *oleh* membuat hubungan fungsi antarunsur
 kalimat lebih tegas dan bernada formal. Pasif tanpa pelaku tetap apa adanya.
 
+**`Sedangkan` bukan pembuka kalimat.** *Sedangkan* adalah penghubung di dalam kalimat.
+Bentuk "... dasar desain sistem keselamatannya. Sedangkan, skenario itu ..." digabung
+menjadi satu kalimat, atau diganti penghubung antarkalimat seperti *Sebaliknya*.
+
 **Bentuk baku yang sering salah:** *linear* bukan *linier*, dan karena itu *taklinear*
 bukan *nonlinier*. Pilih satu bentuk untuk seluruh dokumen, sebab model lain kerap
 memakai *taklinear*, *nonlinier*, dan *linier* sekaligus di dalam satu berkas. Selain
@@ -493,7 +536,7 @@ Indonesia.
 | `references/voice-prib-id.md` | Preset suara PRIB, metrik sasaran, asal korpus | Bila penulisnya PRIB |
 | `scripts/metrik.py` | Pengukur tujuh metrik dengan ambang preset | Langkah 2 dan 6 |
 
-Tidak ada berkas rujukan untuk Langkah 5b sampai 5d. Kalkir, personifikasi, dan
+Tidak ada berkas rujukan untuk Langkah 5b sampai 5d. Kalke, personifikasi, dan
 fragmentasi tidak dapat dideteksi dengan daftar kata, sebab yang salah bukan katanya
 melainkan hubungan antarkata dan pola yang berulang. Satu-satunya alat yang bekerja
 adalah membaca setiap paragraf sambil bertanya kalimat Inggris apa yang ada di baliknya,
@@ -662,7 +705,7 @@ enumerasi 11,9 per 1.000 kata.
 `yang mana` dihapus, enumerasi `seperti` dan triplet dibuang, temuan disusul sebab
 langsung, kalimat pendek penutup ditambahkan, keterbatasan diakui terbuka.
 
-## Contoh kedua: kalkir yang lolos seluruh metrik
+## Contoh kedua: kalke yang lolos seluruh metrik
 
 Paragraf berikut lulus sembilan dari sembilan baris berambang. Ia tetap salah.
 
@@ -730,8 +773,9 @@ bertambah**. Inilah pembeda antara perbaikan yang benar dan peringkasan yang mer
 Kerangka putaran draf, audit, revisi akhir diwarisi dari skill `humanizer`, yang
 bersumber pada halaman Wikipedia *Signs of AI writing*. Katalog pola dan preset suara
 dalam skill ini dibangun dari pengukuran korpus tulisan penulis, bukan dari sumber itu.
-Katalog kalkir pada Langkah 5b dibangun dari penyuntingan diktat Penilaian Dampak dan
+Katalog kalke pada Langkah 5b dibangun dari penyuntingan diktat Penilaian Dampak dan
 Keberlanjutan Lingkungan, 4 September 2026. Katalog personifikasi, register, pembuka
 monoton, dan fusi kalimat pada Langkah 5c dan 5d, beserta seluruh bagian audit berkas
 model lain, dibangun dari perbandingan Bab 5 dan Bab 6 diktat Machine Learning TMP507
-versi Claude lawan versi Gemini, 9 September 2026.
+versi Claude lawan versi Gemini, 9 September 2026. Tambahan versi 1.6 dibangun dari tiga
+latihan menulis yang dikoreksi langsung oleh penulis pada 24 Oktober 2026.

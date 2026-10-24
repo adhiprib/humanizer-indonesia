@@ -5,7 +5,7 @@ seperti keluaran model atau terjemahan, dan kembali ke gaya penulisnya. Skill in
 bisa dipakai untuk mengaudit berkas yang sudah disunting model lain, misalnya hasil
 suntingan Gemini atau ChatGPT.
 
-Versi saat ini: **1.5** (9 September 2026). Riwayat perubahan ada di bagian atas
+Versi saat ini: **1.6** (24 Oktober 2026). Riwayat perubahan ada di bagian atas
 [`SKILL.md`](SKILL.md).
 
 ## Penting: ini bukan alat untuk lolos detektor AI
@@ -18,7 +18,7 @@ Satu-satunya hal yang terbukti menggeser skor secara berarti adalah suntingan ta
 penulisnya sendiri.
 
 Tujuan skill ini adalah membuat teks **lebih luwes dan enak dibaca**: membuang
-nominalisasi yang menumpuk, konektor yang berlebihan, ritme kalimat yang seragam, kalkir
+nominalisasi yang menumpuk, konektor yang berlebihan, ritme kalimat yang seragam, kalke
 dari bahasa Inggris, dan pola khas keluaran model lainnya. Hasilnya adalah **draf untuk
 disunting manusia**, bukan teks jadi. Membaca ulang dan menyunting dengan tangan tetap
 menjadi tugas penulis.
@@ -109,7 +109,7 @@ Terima kasih kepada pembuatnya.
 Yang diwarisi dari skill tersebut adalah kerangka kerjanya, yaitu putaran draf, audit,
 lalu revisi akhir. Katalog polanya disusun ulang sepenuhnya untuk bahasa Indonesia,
 karena pola khas tulisan AI dalam bahasa Indonesia berbeda jauh dari pola dalam bahasa
-Inggris. Preset suara, pengukur metrik, dan langkah-langkah kalkir, personifikasi, serta
+Inggris. Preset suara, pengukur metrik, dan langkah-langkah kalke, personifikasi, serta
 audit berkas suntingan model lain merupakan tambahan baru.
 
 Untuk menyunting teks berbahasa Inggris, pakai skill aslinya.

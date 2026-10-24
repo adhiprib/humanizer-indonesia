@@ -284,6 +284,68 @@ Hanya satu sampel (`Cara membuat yoghurt`, 2009, tulisan blog). Semua tentatif:
   (334 K, 313 K, 314 K). Penanda paling sulit dipalsukan dalam korpus. Kalau menulis teks
   santai bertopik teknis, satuan dan presisi tetap dibawa masuk apa adanya.
 
+**Pembaruan 24 Oktober 2026 [S].** Empat teks santai buatan model (tiga komentar media
+sosial dan satu penjelasan fuel cell) disunting langsung oleh penulis. Hasilnya mempertegas
+bahwa santainya Prib sekarang adalah santai, bukan gaul:
+
+- Kata penghubung dan perbandingan tetap baku: *kayak* menjadi *seperti*, *sama* menjadi
+  *dan*, *jadi* menjadi *sehingga*, dan *Kemudian* ditambahkan.
+- Unsur santai hanya tinggal di verba dan keterangan: *gampangnya*, *nembus*, *muter*,
+  *kepaksa*, *terus*, *ga* (bukan *nggak*).
+- Pilihan kata naik setingkat: *susah* menjadi *sulit*, *obrolan* menjadi *pembahasan*,
+  *soal* menjadi *persoalan*, *luput* menjadi *terlupa*.
+- Subjek dan pelengkap disebut lengkap: "turun *hujan* deras", "paling alot
+  *diperdebatkan*", "listrik *yang kita pakai*".
+
+Partikel *sih*, *ko*, *udah* dan sisipan bercanda dari sampel 2009 tidak muncul sama
+sekali dalam suntingan 2026. Anggap keduanya penanda masa lalu, bukan sasaran.
+
+### 2.14 Penutup faktual, bukan punchline **[S]**
+
+Pada empat dari empat teks latihan 24 Oktober 2026, penulis membuang kalimat penutup yang
+berbentuk punchline, aforisme, atau paralelisme retoris, lalu mengakhiri teks dengan
+fakta atau pengakuan batas.
+
+| Dibuang penulis | Diganti dengan |
+|---|---|
+| ... bukan berhenti di sedotan plastik. | diakhiri pada "Di sini saya tidak sedang menyuruh orang mematikan AC." |
+| Di situlah debat yang sebenarnya. | diakhiri pada "pertanyaan kedua itu yang paling alot diperdebatkan." |
+| Nggak ada yang dibakar sama sekali. | "Kemudian terjadi reaksi hidrogen dengan oksigen menjadi air." |
+| Kendala materialnya juga sama nyatanya, ... | "Selain itu terdapat kendala pada materialnya." |
+
+Bagian 2.10 tetap berlaku: kalimat pendek penutup adalah sumber variasi ritme. Yang
+dilarang adalah isinya yang berupa retorika, bukan panjangnya.
+
+### 2.15 Kalimat pendek disambung penghubung **[S]**
+
+Penulis tidak menyukai kalimat pendek yang berdiri tiba-tiba di tengah paragraf. Pada esai
+LFR, empat kalimat pendek buatan model diberi penghubung di depannya: "*Sedangkan*,
+skenario itu ...", "*Kemudian*, timbal tidak tembus pandang", "*Namun ada masalah
+lainnya*, bismut ...", dan "*Selain itu* terdapat kendala ...". Dua pola ikutan juga
+terlihat. Pertama, kopula *adalah* dipakai untuk daftar dan definisi, bukan titik dua
+("Yang masih layak didiskusikan itu adalah terkait ..."). Kedua, dokumen tidak dijadikan
+pelaku: "Tulisan ini membahas" menjadi "Pada tulisan ini kita akan membahas".
+
+Dari empat penghubung itu, *Sedangkan* di awal kalimat tergolong tidak baku dan sebaiknya
+diganti. Penulis juga menyetujui penggantian *Akibatnya* yang berulang dengan *Karena
+itu*, dan menolak *Konsekuensinya* karena terlalu terasa AI.
+
+### 2.16 Klaim dibuat tepat dan berpihak bila faktanya demikian **[S]**
+
+Suntingan penulis berulang kali mempersempit atau mempertegas klaim:
+
+- "AC yang menyala" menjadi "AC yang *sengaja dibiarkan* menyala", supaya pemakaian yang
+  wajar tidak ikut disalahkan.
+- "Pengalaman satu kota itu" menjadi "Pengalaman *saya* ini", karena yang dialami memang
+  satu orang.
+- "semuanya ketemu oksigen" menjadi "terjadi reaksi hidrogen dengan oksigen".
+- "Hal ini membedakannya dari natrium" menjadi "Hal ini yang menjadi keunggulannya dari
+  natrium" (bentuk yang lebih lazim: *keunggulannya dibandingkan natrium*).
+
+Kepadatan pemadat ikut naik pada setiap suntingan, dari kisaran 68 sampai 91 pada versi
+model menjadi 100 sampai 120 pada versi penulis, karena *akan*, *sudah*, *suatu*, *dapat*,
+*untuk*, dan *tersebut* ditambahkan.
+
 ---
 
 ## 3. Yang bukan suara ini
@@ -305,7 +367,12 @@ kemunculannya berarti sisipan model.
 | Klaim tanpa angka atau rujukan gambar | tambahkan dasar, atau turunkan jadi dugaan |
 | Kalimat seragam 24 kata ke atas | pecah, sisipkan kalimat pendek penutup paragraf |
 | Koordinasi di atas 1,50 | ubah sebagian jadi subordinasi, jangan pecah semuanya |
-| Prosa lebih mampat daripada korpus (pemadat di bawah 45 per 1.000 kata) | kembalikan frasa yang wajar |
+| Prosa lebih mampat daripada korpus (pemadat di bawah 73 per 1.000 kata) | kembalikan frasa yang wajar |
+| Penutup punchline, aforisme, atau paralelisme retoris | tutup dengan fakta atau pengakuan batas (2.14) |
+| *Konsekuensinya* sebagai penghubung | *Karena itu* atau *Akibatnya* |
+| *Sedangkan* di awal kalimat | gabungkan ke kalimat sebelumnya, atau *Sebaliknya* |
+| Dokumen sebagai pelaku (*Tulisan ini membahas*) | *Pada tulisan ini kita akan membahas* |
+| Kata santai pada penghubung (*kayak*, *sama*, *jadi*) dalam teks santai | *seperti*, *dan*, *sehingga* |
 
 **Koreksi terhadap versi awal.** Versi 1.0 menyatakan bahwa kalimat berjalin longgar
 dalam korpus adalah artefak draf dan bukan penanda gaya. Bagian itu **salah**, dan sudah
@@ -357,7 +424,7 @@ sebagai batas yang diketahui, bukan sebagai kekurangan yang tertunda.
 |---|---|---|
 | Akademik jurnal | **memadai** untuk kerja awal, 2 dokumen bersih 2021 sampai 2022 | 2 sampai 3 paper lagi 2023 ke atas, penulis tunggal atau bagian sendiri ditandai |
 | Bahan ajar | **kosong**, cosmology bab4 hanya proksi catatan baca | 2 sampai 3 bab modul atau diktat terkini |
-| Semi-formal | 1 dokumen 2009, register blog | 5 sampai 10 surel atau laporan internal; blog bukan pengganti surel |
+| Semi-formal | 1 dokumen 2009 ditambah 4 suntingan latihan Oktober 2026 | 5 sampai 10 surel atau laporan internal; blog bukan pengganti surel |
 | Proposal internal | **rintisan**, 1 dokumen 166 kata | 3 sampai 5 abstrak proposal atau laporan kemajuan pra-2023 |
 | Dokumen kelembagaan | **kosong** | proposal S3 Terapan, dokumen akreditasi, RPS |
 
