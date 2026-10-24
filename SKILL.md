@@ -25,14 +25,16 @@ pemadat pada Langkah 7 yang masih tertulis 45 padahal seharusnya 73. Seluruh tam
 itu lahir dari perbandingan langsung dua bab diktat versi Claude lawan versi Gemini pada
 9 September 2026, ketika penulis menilai bahasa Indonesia versi Gemini lebih baik
 sedangkan versi Gemini ternyata menghapus rujukan silang dan angka terverifikasi.
-1.6 membetulkan nama langkah dari *kalke* menjadi *kalke* (sinonim *pinjam terjemah*,
-KBBI), karena *kalke* adalah kertas jiplak dan bukan istilah linguistik. Versi ini juga
-menambah lima baris tabel kalke, melarang kalimat penutup berbentuk punchline atau
+1.6 membetulkan nama langkah dari *kalkir* menjadi *kalke* (sinonim *pinjam terjemah*,
+KBBI), karena *kalkir* adalah kertas jiplak dan bukan istilah linguistik. Versi ini juga
+menambah enam baris tabel kalke, melarang kalimat penutup berbentuk punchline atau
 paralelisme retoris, menegaskan bahwa kalimat pendek boleh disambung kata penghubung,
 menambah larangan *Konsekuensinya* dan *Sedangkan* di awal kalimat, serta menambah aturan
-register santai. Seluruhnya lahir dari tiga latihan menulis yang dikoreksi langsung oleh
+register santai, glosarium akronim pada kemunculan pertama, dan *dapat* pada klaim
+kemampuan. Seluruhnya lahir dari empat latihan menulis yang dikoreksi langsung oleh
 penulis pada 24 Oktober 2026: komentar media sosial tentang perubahan iklim, penjelasan
-santai tentang fuel cell, dan esai akademik tentang reaktor cepat berpendingin timbal.
+santai tentang fuel cell, esai akademik tentang reaktor cepat berpendingin timbal, dan
+esai akademik tentang mobil listrik.
 
 Skill ini menyunting teks berbahasa Indonesia agar terbaca sebagai tulisan manusia,
 bukan keluaran model. Kerangka kerjanya diwarisi dari skill `humanizer`, yaitu putaran
@@ -206,6 +208,7 @@ Pola kalke yang paling sering muncul, seluruhnya dari kasus nyata:
 | Istilah teknis diterjemahkan harfiah | sapuan parameter (*parameter sweep*), skenario patahnya pipa besar (*large break*) | variasi parameter atau studi parametrik; kecelakaan kehilangan pendingin akibat pecahnya pipa berdiameter besar (*large break loss-of-coolant accident*, LB-LOCA) |
 | Idiom Inggris dialihbahasakan | tidak datang tanpa harga (*does not come without a price*), pertama-tama berangkat dari (*first and foremost stems from*) | di balik keunggulan tersebut ada kendala; alasan pertama ... adalah |
 | Dokumen dijadikan pelaku | Tulisan ini membahas (*This paper discusses*) | Pada tulisan ini kita akan membahas |
+| Kiasan halus yang terdengar wajar | paling kokoh (*most robust*), selisihnya menyempit (*the gap narrows*), persoalan belum terjawab, tidak dapat dipinjam dari kajian lain (*borrowed*), bekerja paling baik (*performs best*), keuntungan emisi (*emission benefit*) | paling utama; selisihnya menurun; belum terselesaikan; tidak dapat dianggap sama dengan; bekerja optimum; emisi yang ditimbulkan |
 
 Tiga teknik yang terbukti mengubah paragraf terjemahan menjadi mengalir:
 
@@ -383,7 +386,8 @@ Bila kalimat pendek kurang dari 15 persen, tambahkan kalimat pendek penutup para
 punchline.** Aforisme ("Di situlah debat yang sebenarnya"), paralelisme retoris
 ("Kendala materialnya juga sama nyatanya"), dan kontras *bukan X, melainkan Y* yang
 ditaruh di ujung paragraf dibuang oleh penulis pada empat dari empat teks latihan
-24 Oktober 2026. Contoh penutup yang dipertahankan: "Efisiensinya sendiri masih rendah."
+24 Oktober 2026. Hal yang sama berlaku untuk kontras pendek di ujung kalimat, misalnya
+"memakai pendinginan cair ..., bukan pendinginan udara", yang juga dihapus penulis. Contoh penutup yang dipertahankan: "Efisiensinya sendiri masih rendah."
 
 **Kalimat pendek boleh disambung kata penghubung.** Penulis menolak kalimat pendek yang
 berdiri tiba-tiba, lalu menambahkan *Kemudian*, *Selain itu*, *Namun*, atau *Karena itu*
@@ -526,7 +530,14 @@ itu *tolok ukur* bukan *tolak ukur*.
 
 **Istilah asing.** Miringkan dan beri padanan dalam kurung pada pemunculan pertama tiap
 bab atau bagian. Jangan meninggalkan istilah Inggris berdiri telanjang di tengah prosa
-Indonesia.
+Indonesia. Aturan ini juga berlaku untuk istilah yang sudah punya padanan Indonesia yang
+lazim dan untuk akronimnya: *mesin pembakaran dalam (internal combustion engine)*, *arus
+searah (DC)*. Penulis menambahkan keduanya sendiri ketika model melewatkannya.
+
+**Klaim kemampuan diberi *dapat*.** Pernyataan tentang apa yang mampu dilakukan suatu
+alat atau proses ditulis dengan *dapat*: "mobil listrik *dapat* mengubah lebih dari 77
+persen energi", "arus yang tinggi *dapat* membangkitkan panas". Pernyataan status dan
+keadaan terkini diberi penanda waktu, misalnya *Saat ini*.
 
 ## Berkas rujukan
 
@@ -777,5 +788,5 @@ Katalog kalke pada Langkah 5b dibangun dari penyuntingan diktat Penilaian Dampak
 Keberlanjutan Lingkungan, 4 September 2026. Katalog personifikasi, register, pembuka
 monoton, dan fusi kalimat pada Langkah 5c dan 5d, beserta seluruh bagian audit berkas
 model lain, dibangun dari perbandingan Bab 5 dan Bab 6 diktat Machine Learning TMP507
-versi Claude lawan versi Gemini, 9 September 2026. Tambahan versi 1.6 dibangun dari tiga
+versi Claude lawan versi Gemini, 9 September 2026. Tambahan versi 1.6 dibangun dari empat
 latihan menulis yang dikoreksi langsung oleh penulis pada 24 Oktober 2026.

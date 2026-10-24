@@ -346,6 +346,28 @@ Kepadatan pemadat ikut naik pada setiap suntingan, dari kisaran 68 sampai 91 pad
 model menjadi 100 sampai 120 pada versi penulis, karena *akan*, *sudah*, *suatu*, *dapat*,
 *untuk*, dan *tersebut* ditambahkan.
 
+### 2.17 Diksi literal ketimbang kiasan **[S]**
+
+Esai mobil listrik (24 Oktober 2026) sudah lulus seluruh metrik dan ritmenya hampir tidak
+disentuh penulis: rerata 19,2 menjadi 19,5, simpangan baku tetap 8,1, pemadat 98,6 menjadi
+98,3. Yang disunting hampir seluruhnya diksi, dan arahnya seragam, yaitu kata kiasan
+diganti kata teknis yang literal:
+
+| Versi model | Versi penulis |
+|---|---|
+| keunggulan yang paling kokoh | keunggulan yang paling utama |
+| selisihnya terus menyempit | selisihnya terus menurun |
+| persoalan ... belum sepenuhnya terjawab | ... belum sepenuhnya terselesaikan |
+| tidak dapat langsung dipinjam dari hasil kajian | tidak dapat langsung dianggap sama dengan hasil kajian |
+| bekerja paling baik pada rentang suhu | bekerja optimum pada rentang suhu |
+| motor sinkron magnet permanen | motor sinkron bermagnet permanen |
+
+Setiap kata di kolom kiri terdengar wajar bila dibaca sendiri, sehingga lolos dari audit
+Langkah 5b. Polanya baru terlihat bila dikumpulkan. Penulis juga menambahkan glosarium
+yang dilewatkan model, yaitu *(internal combustion engine)* dan *(DC)*, menambahkan *dapat*
+pada klaim kemampuan, menambahkan *Saat ini* dan *terutama di Indonesia* sebagai penanda
+waktu dan cakupan, dan membuang kontras ", bukan pendinginan udara" di ujung kalimat.
+
 ---
 
 ## 3. Yang bukan suara ini
@@ -372,6 +394,8 @@ kemunculannya berarti sisipan model.
 | *Konsekuensinya* sebagai penghubung | *Karena itu* atau *Akibatnya* |
 | *Sedangkan* di awal kalimat | gabungkan ke kalimat sebelumnya, atau *Sebaliknya* |
 | Dokumen sebagai pelaku (*Tulisan ini membahas*) | *Pada tulisan ini kita akan membahas* |
+| Kiasan halus (*paling kokoh*, *menyempit*, *terjawab*, *dipinjam*) | kata teknis yang literal (2.17) |
+| Kontras *bukan X* di ujung kalimat | hapus, atau jadikan kalimat tersendiri bila memang penting |
 | Kata santai pada penghubung (*kayak*, *sama*, *jadi*) dalam teks santai | *seperti*, *dan*, *sehingga* |
 
 **Koreksi terhadap versi awal.** Versi 1.0 menyatakan bahwa kalimat berjalin longgar
