@@ -101,10 +101,18 @@ Berkas `voice-prib-id.md` boleh dihapus setelah preset Anda siap.
 
 ## Asal-usul
 
-Kerangka kerjanya (draf, audit, revisi akhir) diwarisi dari skill `humanizer`
-berbahasa Inggris. Katalog polanya disusun ulang sepenuhnya untuk bahasa Indonesia,
+Skill ini dikembangkan dari skill **humanizer** karya blader,
+[github.com/blader/humanizer](https://github.com/blader/humanizer) (lisensi MIT), yang
+menyunting teks bahasa Inggris berdasarkan panduan *Signs of AI writing* dari Wikipedia.
+Terima kasih kepada pembuatnya.
+
+Yang diwarisi dari skill tersebut adalah kerangka kerjanya, yaitu putaran draf, audit,
+lalu revisi akhir. Katalog polanya disusun ulang sepenuhnya untuk bahasa Indonesia,
 karena pola khas tulisan AI dalam bahasa Indonesia berbeda jauh dari pola dalam bahasa
-Inggris.
+Inggris. Preset suara, pengukur metrik, dan langkah-langkah kalkir, personifikasi, serta
+audit berkas suntingan model lain merupakan tambahan baru.
+
+Untuk menyunting teks berbahasa Inggris, pakai skill aslinya.
 
 ## Lisensi
 
