@@ -60,8 +60,42 @@ lewat pengaturan Skills di Claude. Panduan resminya ada di
 **Claude Code.** Salin folder ini ke direktori skill pribadi Anda:
 
 ```bash
-git clone https://github.com/<akun>/humanizer-indonesia.git ~/.claude/skills/humanizer-indonesia
+git clone https://github.com/adhiprib/humanizer-indonesia.git ~/.claude/skills/humanizer-indonesia
 ```
+
+**Google Antigravity.** Antigravity membaca skill dengan format `SKILL.md` yang sama,
+sehingga folder ini dapat dipasang tanpa perubahan. Ada dua cakupan pemasangan:
+
+- **Global**, berlaku untuk semua proyek: `~/.gemini/config/skills/humanizer-indonesia/`.
+  Di Windows, lokasinya `%USERPROFILE%\.gemini\config\skills\humanizer-indonesia\`.
+  Versi Antigravity yang lebih lama memakai `~/.gemini/antigravity/skills/`.
+- **Per proyek**, hanya untuk satu ruang kerja: `<akar-proyek>/.agents/skills/humanizer-indonesia/`.
+
+macOS atau Linux:
+
+```bash
+git clone https://github.com/adhiprib/humanizer-indonesia.git ~/.gemini/config/skills/humanizer-indonesia
+```
+
+Windows (PowerShell):
+
+```powershell
+git clone https://github.com/adhiprib/humanizer-indonesia.git "$env:USERPROFILE\.gemini\config\skills\humanizer-indonesia"
+```
+
+Untuk memperbarui ke versi terbaru, jalankan `git pull` di dalam folder tersebut. Bila
+skill yang sama pernah dipasang di lebih dari satu lokasi, hapus salinan lama supaya agen
+tidak memuat dua versi berbeda.
+
+Agen Antigravity memilih skill berdasarkan kolom `description`, sehingga permintaan seperti
+"rapikan bahasa paragraf ini" sudah cukup untuk memicunya. Bila ingin memastikan, sebut
+namanya secara eksplisit, misalnya "pakai skill humanizer-indonesia untuk abstrak ini".
+Perintah `/humanizer-id` adalah fitur Claude Code dan belum tentu tersedia di Antigravity.
+Skrip `scripts/metrik.py` dijalankan agen lewat terminal, jadi Python 3 perlu terpasang di
+komputer Anda.
+
+Panduan resmi Google tentang skill Antigravity ada di
+[codelabs.developers.google.com](https://codelabs.developers.google.com/getting-started-with-antigravity-skills).
 
 ## Cara memakai
 
