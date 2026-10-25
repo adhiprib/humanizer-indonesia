@@ -25,6 +25,7 @@ BERKAS = [
     (AKAR / "references" / "id-ai-tells.md", "id-ai-tells.md"),
     (AKAR / "references" / "voice-prib-id.md", "voice-prib-id.md"),
     (AKAR / "scripts" / "metrik.py", "metrik.py"),
+    (AKAR / "LICENSE", "LICENSE"),
 ]
 
 
