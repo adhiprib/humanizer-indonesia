@@ -11,6 +11,10 @@ misalnya rilis v1.6.1 yang memuat aturan versi 1.6.
 | `INSTRUKSI.md` | Teks yang ditempel ke instruksi Project ChatGPT, Custom GPT, atau Gem |
 | `buat_paket.py` | Membuat ZIP datar berisi instruksi, berkas skill, dan lisensi |
 
+Video tutorial pemasangan:
+[ChatGPT melalui Project](https://youtu.be/1m0B6j2egko) dan
+[Gemini melalui Gem](https://youtu.be/5NclZSGfZfk).
+
 ## Membuat paket
 
 Jalankan dari akar repo:

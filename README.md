@@ -106,6 +106,11 @@ HP skill perlu dikemas sebagai plugin. Panduan dan instruksi ringkasnya ada di
 dihitung. Bila skrip tidak dapat dijalankan, misalnya di Gem, metrik ditulis
 *tidak diukur*.
 
+Video tutorial pemasangan, dari mengunduh ZIP di halaman rilis sampai uji pertama:
+
+- [Tutorial Penggunaan Humanizer Indonesia di ChatGPT](https://youtu.be/1m0B6j2egko)
+- [Tutorial Penggunaan Humanizer Indonesia di Gemini](https://youtu.be/5NclZSGfZfk)
+
 ## Cara memakai
 
 Panggil dengan `/humanizer-id`, atau cukup minta dalam bahasa biasa, misalnya
