@@ -98,11 +98,13 @@ komputer Anda.
 Panduan resmi Google tentang skill Antigravity ada di
 [codelabs.developers.google.com](https://codelabs.developers.google.com/getting-started-with-antigravity-skills).
 
-**ChatGPT dan Gemini (web dan aplikasi HP).** Skill ini juga dapat dipasang sebagai
-Custom GPT, sebagai skill di fitur Skills ChatGPT, atau sebagai Gem di Gemini. Panduan
-dan instruksi ringkasnya ada di [`portable/README.md`](portable/README.md). Di Gemini,
-skrip `metrik.py` tidak dapat dijalankan, sehingga metrik hanya dihitung sebagai
-perkiraan manual.
+**ChatGPT dan Gemini (web dan aplikasi HP).** Versi portabel dapat dipakai lewat
+Project ChatGPT, Custom GPT bila editornya tersedia di akun, atau Gem di Gemini. Skill
+mandiri di ChatGPT hanya tersedia di aplikasi desktop dan Codex, sedangkan di web dan
+HP skill perlu dikemas sebagai plugin. Panduan dan instruksi ringkasnya ada di
+[`portable/README.md`](portable/README.md). Metrik hanya dilaporkan bila benar-benar
+dihitung. Bila skrip tidak dapat dijalankan, misalnya di Gem, metrik ditulis
+*tidak diukur*.
 
 ## Cara memakai
 
