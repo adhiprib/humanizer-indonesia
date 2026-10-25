@@ -49,6 +49,7 @@ registernya dan menyatakan terus terang bahwa kalibrasi suara tidak dilakukan.
 | `references/id-ai-tells.md` | Katalog pola khas tulisan AI dalam bahasa Indonesia, positif palsu, dan register yang dikecualikan |
 | `references/voice-prib-id.md` | Preset suara penulis (contoh, silakan diganti) |
 | `scripts/metrik.py` | Pengukur metrik gaya teks Indonesia, tanpa dependensi di luar pustaka standar Python |
+| `portable/` | Versi portabel untuk ChatGPT dan Gemini: instruksi ringkas, panduan pemasangan, skrip paket |
 
 ## Pemasangan
 
@@ -96,6 +97,12 @@ komputer Anda.
 
 Panduan resmi Google tentang skill Antigravity ada di
 [codelabs.developers.google.com](https://codelabs.developers.google.com/getting-started-with-antigravity-skills).
+
+**ChatGPT dan Gemini (web dan aplikasi HP).** Skill ini juga dapat dipasang sebagai
+Custom GPT, sebagai skill di fitur Skills ChatGPT, atau sebagai Gem di Gemini. Panduan
+dan instruksi ringkasnya ada di [`portable/README.md`](portable/README.md). Di Gemini,
+skrip `metrik.py` tidak dapat dijalankan, sehingga metrik hanya dihitung sebagai
+perkiraan manual.
 
 ## Cara memakai
 
