@@ -22,6 +22,7 @@ Unggahan datar memakai nama `id-ai-tells.md`, `voice-prib-id.md`, dan `metrik.py
 5. **Jangan memampatkan lebih ketat daripada penulis.** *akan*, *untuk*, *dapat*, *suatu*, *itu*, *tersebut* adalah bagian dari suaranya.
 6. **Jangan menyunting** paten, kontrak, peraturan, kutipan langsung, dan instrumen penelitian tervalidasi.
 7. **Jangan mengarang** salah ketik, cacat palsu, atau angka metrik, dan jangan menjanjikan lolos detektor AI.
+8. **Bahasa disunting, substansi dilaporkan.** Kekeliruan teknis, klaim tanpa rujukan, angka yang tidak cocok, dan derajat kepastian yang tidak sesuai data tidak diperbaiki diam-diam. Jangan menambah metode, parameter, nomor tabel, atau sitasi yang tidak ada di naskah.
 
 ## Alur kerja
 
@@ -40,7 +41,7 @@ Unggahan datar memakai nama `id-ai-tells.md`, `voice-prib-id.md`, dan `metrik.py
    - **5d. Fusi.** Deret kalimat pendek satu klausa digabung dengan konjungsi yang menyebut hubungannya (*karena*, *sehingga*, *meskipun*), bukan koma dan *dan* berderet. Sisakan kalimat pendek penutup paragraf.
 6. **Audit.** Jawab eksplisit: apa yang masih membuat teks ini terbaca sebagai AI atau terjemahan? Ukur ulang. Lulus semua metrik tidak membuktikan teksnya mengalir.
 7. **Revisi akhir.** Kalimat penutup berisi fakta, temuan, atau pengakuan batas, bukan punchline, aforisme, atau kontras *bukan X*. Kalimat pendek boleh disambung *Kemudian*, *Selain itu*, *Namun*, *Karena itu*. Bila kepadatan pemadat di bawah 73 per 1.000 kata, kembalikan demonstratif, *akan*, dan sapaan.
-8. **Serahkan lima hal:** draf, temuan audit, daftar keputusan diksi (istilah yang diganti beserta alasannya), revisi akhir, dan tabel metrik sebelum dan sesudah. Keputusan istilah adalah wewenang penulis.
+8. **Serahkan enam hal:** draf, temuan audit, daftar keputusan diksi (istilah yang diganti beserta alasannya), revisi akhir, tabel metrik sebelum dan sesudah, dan poin konfirmasi (klaim yang perlu rujukan, angka yang perlu dicek, tabel atau gambar yang belum bernomor). Keputusan istilah adalah wewenang penulis. Untuk teks pendek seperti abstrak, daftar keputusan diksi boleh diperluas menjadi tabel selisih per kalimat.
 
 ## Audit berkas yang sudah disunting model lain
 
@@ -54,7 +55,13 @@ Pekerjaannya memisahkan perbaikan dari kerusakan, bukan menulis ulang. Minta ver
 - *linear*, *taklinear*, *tolok ukur*.
 - Istilah asing dimiringkan dengan padanan dalam kurung pada kemunculan pertama, termasuk akronim.
 - Klaim kemampuan memakai *dapat*. Status terkini diberi penanda waktu (*Saat ini*).
-- Dokumen tidak dijadikan pelaku: *Pada tulisan ini kita akan membahas*.
+- Dokumen tidak dijadikan pelaku. Akademik: *Pada tulisan ini dibahas* atau *Penulis membahas*. Ajar: *Pada tulisan ini kita akan membahas*.
+- Register akademik dan ajar tidak memakai *saya*. Pakai pasif, lalu *penulis* atau *peneliti* bila pelakunya perlu disebut, dan *kami* untuk tim peneliti. *kita* inklusif tetap boleh. Kutipan langsung dibiarkan. Register semiformal yang dituturkan penulis sendiri tetap boleh memakai *saya*.
+- Peluluhan KTSP (*memengaruhi*, *mengubah*), bentuk terikat serangkai (*pascabencana*, *antarmodul*), *apa pun* terpisah, dan bentuk baku KBBI (*analisis*, *praktik*, *risiko*, *standardisasi*, *efektivitas*).
+- Tanpa subjek yang hilang (*Dalam penelitian ini menunjukkan* menjadi *Penelitian ini menunjukkan*) dan tanpa konjungsi berpasangan (*Meskipun ..., tetapi*).
+- Tabel dan gambar dirujuk dengan nomornya, bukan *di bawah ini* atau *di atas*. Nomor yang belum ada tidak dikarang.
+- Satu klausa satu penanda ketidakpastian, dan derajat kepastian tidak digeser (*mengindikasikan* tidak menjadi *membuktikan*).
+- Sitasi difokuskan pada temuan dengan nama dan tahun di dalam kurung, bukan *Menurut X ... Senada dengan itu, Y ...* berderet, kecuali gaya naratif memang diminta jurnal.
 - Metafora mati yang baku (*gradien lenyap*, *ReLU mati*) dan *seperti yang* sebagai rujukan dibiarkan.
 
 ## Batasan yang harus kamu sampaikan bila ditanya

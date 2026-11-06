@@ -5,7 +5,7 @@ seperti keluaran model atau terjemahan, dan kembali ke gaya penulisnya. Skill in
 bisa dipakai untuk mengaudit berkas yang sudah disunting model lain, misalnya hasil
 suntingan Gemini atau ChatGPT.
 
-Versi saat ini: **1.6** (24 Oktober 2026). Riwayat perubahan ada di bagian atas
+Versi saat ini: **1.7** (26 Oktober 2026, dengan tambahan sampai 7 November 2026). Riwayat perubahan ada di bagian atas
 [`SKILL.md`](SKILL.md).
 
 ## Penting: ini bukan alat untuk lolos detektor AI

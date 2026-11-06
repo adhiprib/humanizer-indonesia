@@ -2,6 +2,34 @@
 """
 metrik.py - pengukur gaya teks bahasa Indonesia untuk skill humanizer-indonesia.
 
+Versi 1.4 (skill 1.7) menambah dua diagnostik tanpa ambang. Pertama, triplet, yaitu daftar
+tepat tiga butir "A, B, dan C" (juga "atau" dan "serta") dengan atau tanpa kata "seperti".
+Baris enumerasi hanya menangkap daftar yang diawali "seperti", sehingga lima triplet yang
+ditandai GPTZero pada esai fuel cell (26 Oktober 2026) tercatat nol. Kedua, kalimat pendek
+(7 kata ke bawah) yang berdiri tanpa penghubung di awal atau tengah paragraf, sebab
+GPTZero menandai "Kondisi di bumi berbeda." dan penulis memang menambahkan penghubung pada
+kalimat semacam itu (bagian 2.15 voice-prib-id.md). Kalimat pendek penutup paragraf tidak
+dihitung, karena itu penanda suara penulis (bagian 2.10).
+
+Tambahan 31 Oktober 2026, masih versi 1.4. Detektor triplet kini juga menangkap butir
+berupa frasa verba sampai 10 kata ("menghitung emisi CO2 dari pembakaran bahan bakar") dan
+daftar kedua yang dibuka "serta" atau "dan" di dalam kalimat yang sama. Diagnostik baru
+deret sejajar menghitung daftar empat butir ke atas yang kata pertamanya berbentuk seragam
+(-nya, me-, ber-, di-, pe-an, ke-an). Keduanya lahir dari Bab 9 diktat perubahan iklim
+yang empat kali ditandai Everything in threes oleh GPTZero; versi sebelumnya hanya
+menangkap satu. Perbaikan kedua pada hari yang sama: "maka", "artinya", "terutama",
+"khususnya", dan "hampir" tidak lagi dihitung sebagai butir, dan segmen pembuka yang
+panjang dihitung sebagai butir keempat. Temuan skrip kini sama dengan GPTZero pada Bab 9
+(4), esai FCEV (0), dan tulisan opini penulis (1).
+
+Tambahan 7 November 2026, masih versi 1.4. Sembilan diagnostik kaidah dan wacana tanpa
+ambang: preposisi yang menghilangkan subjek,
+konjungsi berpasangan, rujukan spasial semu, bentuk tidak baku dan bentuk terikat yang
+ditulis terpisah, modalitas bertumpuk, otoritas tanpa rujukan, sitasi formulaik, residu
+percakapan chatbot, dan rentang semu. Satu diagnostik lagi menghitung kalimat yang memuat
+*saya* di luar kutipan langsung, hanya pada preset akademik dan ajar. Pada contoh Sesudah di SKILL.md dan pada
+voice-prib-id.md, kesembilannya mencatat nol temuan.
+
 Versi 1.3 (skill 1.6) menambah baris diagnostik penyangkalan antisipatif, yaitu pola
 "bukan berarti" dan "bukan X, melainkan Y", dengan sasaran nol.
 
@@ -56,6 +84,64 @@ FRASA_KOSONG = [
 POLA_SANGKAL = re.compile(
     r"\bbukan\s+berarti\b|\bbukan\s+sekadar\b[^.]{0,80}?\bmelainkan\b"
     r"|\bbukan\s+[^.,]{1,60},\s*melainkan\b", re.I)
+
+# Tambahan 7 November 2026, masih versi 1.4. Diagnostik kaidah dan wacana, semuanya tanpa
+# ambang. Setiap temuan ditinjau dulu sebelum menyunting.
+VERBA_LAPOR = (r"menunjukkan|menjelaskan|membahas|memperlihatkan|membuktikan|menyimpulkan|"
+               r"menyatakan|mengungkapkan|menguraikan|memaparkan|menghasilkan|diperoleh")
+POLA_SUBJEK_HILANG = re.compile(
+    r"^(?:Dalam|Pada|Di dalam|Bagi|Menurut)\s+[^,]{3,60}?\s+(?:ini\s+|tersebut\s+)?(?:"
+    + VERBA_LAPOR + r")\b", re.I)
+
+POLA_KONJ_GANDA = re.compile(
+    r"\b(?:meskipun|walaupun|walau|kendatipun|biarpun|sekalipun)\b[^.]{3,160}?,\s*"
+    r"(?:tetapi|namun|akan tetapi)\b"
+    r"|\b(?:karena|oleh karena|sebab)\b[^.]{3,160}?,\s*maka\b", re.I)
+
+POLA_RUJUKAN_SPASIAL = re.compile(
+    r"\b(?:tabel|gambar|grafik|diagram|persamaan|bagan|kurva)\s+(?:di|pada bagian|yang ada di)\s+"
+    r"(?:atas|bawah)\b|\b(?:di atas|di bawah) ini\b(?=[^.]{0,40}\b(?:tabel|gambar|grafik)\b)", re.I)
+
+BENTUK_TIDAK_BAKU = {
+    "mempengaruhi": "memengaruhi", "merubah": "mengubah",
+    "dirubah": "diubah", "mensintesis": "menyintesis",
+    "mensukseskan": "menyukseskan", "mentaati": "menaati", "menterjemahkan": "menerjemahkan",
+    "analisa": "analisis", "menganalisa": "menganalisis", "praktek": "praktik",
+    "resiko": "risiko", "standarisasi": "standardisasi", "efektifitas": "efektivitas",
+    "aktifitas": "aktivitas", "produktifitas": "produktivitas", "kreatifitas": "kreativitas",
+    "sensitifitas": "sensitivitas", "selektifitas": "selektivitas", "sistim": "sistem",
+    "linier": "linear", "nonlinier": "taklinear atau nonlinear", "apapun": "apa pun",
+    "siapapun": "siapa pun", "manapun": "mana pun", "kapanpun": "kapan pun",
+    "dimanapun": "di mana pun", "ijin": "izin", "obyek": "objek",
+    "subyek": "subjek", "kwalitas": "kualitas", "nampak": "tampak", "himbauan": "imbauan",
+}
+POLA_TERIKAT = re.compile(
+    r"\b(?:pasca|antar|multi|non|pra|sub|semi|swa|tuna|purna|nir)\s+"
+    r"(?!jemput\b|dan\b|atau\b|yang\b)[a-z]{3,}", re.I)
+POLA_TOLAK_UKUR = re.compile(r"\btolak\s+ukur\b", re.I)
+
+POLA_MODAL_GANDA = re.compile(
+    r"\b(?:mungkin|barangkali|kemungkinan besar)\s+(?:dapat|bisa|berpotensi|akan dapat|diduga)\b"
+    r"|\bberpotensi\s+(?:dapat|bisa|mungkin)\b|\b(?:dapat|bisa)\s+berpotensi\b"
+    r"|\bdiduga\s+(?:mungkin|dapat)\b", re.I)
+
+POLA_OTORITAS = re.compile(
+    r"\b(?:banyak|sebagian besar|para|berbagai)\s+(?:peneliti|ahli|pakar|studi|penelitian|kajian|"
+    r"literatur)\b(?:\s+\w+){0,4}\s+(?:sepakat|menyatakan|menunjukkan|meyakini|berpendapat|"
+    r"telah membuktikan)", re.I)
+
+POLA_SITASI_FORMULA = re.compile(
+    r"\b(?:senada dengan (?:itu|hal tersebut|pendapat)|sejalan dengan (?:itu|hal tersebut|pendapat)|"
+    r"hal (?:serupa|senada|yang sama) (?:juga )?(?:diungkapkan|dikemukakan|disampaikan|dinyatakan))\b",
+    re.I)
+POLA_MENURUT_PENULIS = re.compile(r"^Menurut\s+[A-Z][\w\-]+(?:\s+(?:dkk\.?|et al\.?|dan\s+[A-Z][\w\-]+))?\s*\(\d{4}")
+
+POLA_RESIDU_BOT = re.compile(
+    r"\b(?:tentu,? berikut|berikut (?:adalah )?(?:draf|versi|revisi|hasil suntingan)|"
+    r"semoga membantu|semoga penjelasan ini membantu|jangan ragu untuk|"
+    r"apakah ada yang ingin (?:anda )?(?:tanyakan|tambahkan))\b", re.I)
+
+POLA_RENTANG_SEMU = re.compile(r"\bmulai dari\s+[^.,]{2,50}?\s+(?:hingga|sampai)\b", re.I)
 
 PEMBUKA_KONEKTOR = ("namun", "selain itu", "akan tetapi", "tetapi", "sedangkan",
                     "meski", "walaupun", "oleh karena", "dengan demikian",
@@ -144,6 +230,108 @@ def deret_pembuka(teks):
     return hasil
 
 
+BUKAN_BUTIR = PEMBUKA_KONEKTOR + PEMBUKA_KETERANGAN + (
+    "secara", "yang", "masing-masing", "dan", "atau", "serta", "bahwa", "agar", "supaya",
+    "bagi", "termasuk", "yaitu", "yakni", "berbeda", "dibandingkan", "maka", "artinya",
+    "terutama", "khususnya", "hampir")
+
+
+def _bukan_butir(seg):
+    return (seg.strip().lower() + " ").startswith(BUKAN_BUTIR)
+
+
+POLA_VERBA = re.compile(r"^(?:me|ber|ter|di)[a-z]{3,}$", re.I)
+PENGHUBUNG_DAFTAR = ("dan ", "serta ", "atau ")
+
+
+def _kata1(seg):
+    w = seg.strip().split()
+    return w[0].lower() if w else ""
+
+
+def cari_triplet(kal):
+    """Daftar tepat tiga butir "A, B, dan C" (juga atau/serta). Isi kurung dibuang dulu.
+    B maksimal 6 kata, atau 10 kata bila B frasa verba (menghitung ..., berubah ...).
+    A boleh ekor klausa panjang, termasuk klausa yang dibuka "serta" atau "dan" (daftar
+    kedua di dalam kalimat yang sama). Segmen sebelum A dihitung sebagai butir keempat
+    kecuali diawali keterangan atau konektor (klausa pembuka)."""
+    hasil = []
+    for k in kal:
+        kk = re.sub(r"\([^)]*\)", "", re.sub(r"(\d),(\d)", r"\1<D>\2", k))
+        for m in re.finditer(r",?\s+(?:dan|atau|serta)\s+", kk):
+            r = list(reversed(kk[:m.start()].split(",")))
+            if len(r) < 2:
+                continue
+            nb, na = len(r[0].split()), len(r[1].split())
+            batas_b = 10 if POLA_VERBA.match(_kata1(r[0])) else 6
+            if not 1 <= nb <= batas_b or _bukan_butir(r[0]) or na == 0:
+                continue
+            a_dibuka_penghubung = (r[1].strip().lower().startswith(PENGHUBUNG_DAFTAR)
+                                   and na >= 3)
+            if not a_dibuka_penghubung:
+                if na <= 8 and _bukan_butir(r[1]):
+                    continue
+                if len(r) == 2 and na <= 3 and nb >= 4:
+                    continue  # frasa pembuka pendek, misalnya "Kelemahannya, PEMFC memerlukan ..."
+                if na <= 6 and len(r) > 2 and r[2].strip() and (
+                        len(r) > 3 or not _bukan_butir(r[2]) or len(r[2].split()) > 3):
+                    continue
+            hasil.append(k)
+            break
+    return hasil
+
+
+def _templat(kata):
+    """Bentuk kata pertama butir: nominalisasi -nya, verba me-/ber-/di-, atau nomina pe-an/ke-an."""
+    if len(kata) > 5 and kata.endswith("nya"):
+        return "-nya"
+    for awalan in ("me", "ber", "di"):
+        if POLA_VERBA.match(kata) and kata.startswith(awalan):
+            return awalan + "-"
+    if kata.startswith("pe") and kata.endswith("an"):
+        return "pe-an"
+    if kata.startswith("ke") and kata.endswith("an"):
+        return "ke-an"
+    return None
+
+
+def deret_sejajar(kal):
+    """Daftar empat butir atau lebih yang kata pertama setiap butirnya berbentuk sama,
+    misalnya "meningkatnya ..., berubahnya ..., naiknya ..., dan meningkatnya ...".
+    GPTZero menandai deret semacam ini sebagai Everything in threes (31 Oktober 2026)."""
+    hasil = []
+    for k in kal:
+        kk = re.sub(r"\([^)]*\)", "", re.sub(r"(\d),(\d)", r"\1<D>\2", k))
+        for m in re.finditer(r",?\s+(?:dan|atau|serta)\s+", kk):
+            c = re.split(r"[,.;]", kk[m.end():])[0]
+            butir = [c]
+            for seg in reversed(kk[:m.start()].split(",")):
+                if ":" in seg:
+                    butir.append(seg.split(":")[-1])
+                    break
+                if len(seg.split()) > 6 or _bukan_butir(seg):
+                    break
+                butir.append(seg)
+            templat = {_templat(_kata1(b)) for b in butir}
+            if len(butir) >= 4 and len(templat) == 1 and None not in templat:
+                hasil.append(k)
+                break
+    return hasil
+
+
+def pendek_lepas(teks):
+    """Kalimat 7 kata ke bawah, bukan kalimat terakhir paragraf, tanpa penghubung di depan."""
+    hasil = []
+    for p in teks.split("\n\n"):
+        if not p.strip() or p.lstrip().startswith(("#", "|", "[")):
+            continue
+        kal = pecah_kalimat(ambil_prosa(p))
+        for k in kal[:-1]:
+            if len(k.split()) <= 7 and not k.lower().startswith(PEMBUKA_KONEKTOR):
+                hasil.append(k)
+    return hasil
+
+
 def ukur(teks):
     body = ambil_prosa(teks)
     kal = pecah_kalimat(body)
@@ -183,7 +371,50 @@ def ukur(teks):
         "en_rentang": len(re.findall(r"\d\s?\u2013\s?\d", body)),
         "pemadat": len(PEMADAT.findall(body)) / kata * 1000,
         "contoh_enum": enum[:3], "deret": deret_pembuka(teks),
+        "triplet": cari_triplet(kal), "pendek_lepas": pendek_lepas(teks),
+        "sejajar": deret_sejajar(kal),
+        "kaidah": periksa_kaidah(kal, body),
     }
+
+
+def periksa_kaidah(kal, body):
+    """Diagnostik tambahan 7 November 2026. Mengembalikan {nama: [contoh, ...]}."""
+    h = {}
+    h["subjek_hilang"] = [k for k in kal if POLA_SUBJEK_HILANG.match(k)]
+    h["konjungsi_ganda"] = [m.group(0) for m in POLA_KONJ_GANDA.finditer(body)]
+    h["rujukan_spasial"] = [m.group(0) for m in POLA_RUJUKAN_SPASIAL.finditer(body)]
+    tb = []
+    for w in re.findall(r"\b[a-z]+\b", body.lower()):
+        if w in BENTUK_TIDAK_BAKU:
+            tb.append("%s -> %s" % (w, BENTUK_TIDAK_BAKU[w]))
+    tb += ["%s -> serangkai" % m.group(0) for m in POLA_TERIKAT.finditer(body)]
+    tb += ["tolak ukur -> tolok ukur" for _ in POLA_TOLAK_UKUR.finditer(body)]
+    h["tidak_baku"] = tb
+    h["modal_ganda"] = [m.group(0) for m in POLA_MODAL_GANDA.finditer(body)]
+    h["otoritas"] = [m.group(0) for m in POLA_OTORITAS.finditer(body)
+                     if "(" not in body[m.end():m.end() + 120].split(".")[0]]
+    formula = [m.group(0) for m in POLA_SITASI_FORMULA.finditer(body)]
+    menurut = [k[:60] for k in kal if POLA_MENURUT_PENULIS.match(k)]
+    h["sitasi_formula"] = formula + (menurut if len(menurut) >= 3 else [])
+    h["residu_bot"] = [m.group(0) for m in POLA_RESIDU_BOT.finditer(body)]
+    h["rentang_semu"] = [m.group(0) for m in POLA_RENTANG_SEMU.finditer(body)]
+    tanpa_kutipan = re.sub(r'["\u201c][^"\u201d]*["\u201d]', " ", body)
+    h["saya"] = [k[:70] for k in pecah_kalimat(tanpa_kutipan) if re.search(r"\b(?:saya|aku|ku)\b", k, re.I)]
+    return h
+
+
+LABEL_KAIDAH = [
+    ("subjek_hilang", "Preposisi menghilangkan subjek (Dalam penelitian ini menunjukkan)"),
+    ("konjungsi_ganda", "Konjungsi berpasangan (Meskipun ..., tetapi; Karena ..., maka)"),
+    ("rujukan_spasial", "Rujukan spasial semu (tabel di bawah ini, grafik di atas)"),
+    ("tidak_baku", "Bentuk tidak baku dan bentuk terikat yang terpisah"),
+    ("modal_ganda", "Modalitas bertumpuk (mungkin dapat, berpotensi dapat)"),
+    ("otoritas", "Otoritas tanpa rujukan (banyak peneliti sepakat)"),
+    ("sitasi_formula", "Sitasi formulaik (Senada dengan itu, Menurut X (tahun) berderet)"),
+    ("residu_bot", "Residu percakapan chatbot (Tentu, berikut; Semoga membantu)"),
+    ("rentang_semu", "Rentang semu (mulai dari X hingga Y)"),
+    ("saya", "Kata ganti saya di luar kutipan (hanya preset akademik dan ajar)"),
+]
 
 
 def status(nilai, rentang):
@@ -226,9 +457,32 @@ def cetak(m, nama_preset):
     print("  Enumerasi %d, rujukan 'seperti yang' %d (rujukan tidak disunting)" % (m["n_enum"], m["n_rujukan"]))
     print("  dimana %d, yang mana %d" % (m["dimana"], m["yang_mana"]))
     print("  Frasa kosong terdeteksi: %d" % m["frasa_kosong"])
+    print("  Triplet (daftar tepat tiga butir, dengan atau tanpa 'seperti'): %d, %.2f per 1.000 kata"
+          % (len(m["triplet"]), len(m["triplet"]) / m["kata"] * 1000))
+    print("    Tanpa ambang. Sisakan hanya yang ketiga butirnya membawa informasi berbeda (D3).")
+    for c in m["triplet"][:6]:
+        print("    > " + c[:82])
+    print("  Deret sejajar (4 butir ke atas, bentuk kata pertama seragam): %d" % len(m["sejajar"]))
+    print("    Tanpa ambang. Pecah bentuknya atau jadikan daftar bernomor (D3).")
+    for c in m["sejajar"][:6]:
+        print("    > " + c[:82])
+    print("  Kalimat pendek lepas (7 kata ke bawah, bukan penutup paragraf, tanpa penghubung): %d"
+          % len(m["pendek_lepas"]))
+    print("    Tanpa ambang. Beri penghubung atau gabungkan ke kalimat sesudahnya (2.15).")
+    for c in m["pendek_lepas"][:6]:
+        print("    > " + c[:82])
     print("  Penyangkalan antisipatif (bukan berarti, bukan X melainkan Y): %d   sasaran 0" % m["sangkal"])
     for c in m["contoh_sangkal"]:
         print("    > %s" % c)
+    print("  Kaidah dan wacana (tambahan 7 November 2026, tanpa ambang, sasaran 0 kecuali")
+    print("  rentang semu dan sitasi naratif yang memang konvensi jurnal):")
+    for kunci, label in LABEL_KAIDAH:
+        if kunci == "saya" and nama_preset == "semiformal":
+            continue
+        isi = m["kaidah"][kunci]
+        print("    %-74s %d" % (label, len(isi)))
+        for c in isi[:4]:
+            print("      > " + c[:78])
     print("  En dash sebagai rentang angka: %d (tidak dihitung pelanggaran)" % m["en_rentang"])
     print("  Kepadatan kata pemadat: %.1f per 1.000 kata" % m["pemadat"])
     print("    Korpus penulis berkisar 73 sampai 139. Tanpa ambang, dan BUKAN sasaran.")

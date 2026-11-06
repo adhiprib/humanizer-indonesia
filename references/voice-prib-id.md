@@ -1,6 +1,6 @@
 # Preset Suara: PRIB (Bahasa Indonesia)
 
-Modul referensi untuk skill `humanizer`. Dipakai bersama `references/id-ai-tells.md`.
+Modul referensi untuk skill `humanizer-indonesia`. Dipakai bersama `references/id-ai-tells.md`.
 
 Aturan format mutlak: keluaran **tidak boleh memuat em dash (U+2014) maupun en dash
 (U+2013)** di badan prosa. Dasarnya bukan selera, melainkan data korpus di bagian 0.
@@ -24,7 +24,8 @@ terbit karena itu menjadi syarat kelayakan.
 | **A. Patokan** | Paper Pengabdian v2 | 2021 | penulis pertama, pra-AI |
 | **A. Patokan** | Abstract dynotest | pra-2023 | tunggal, salah ketik dan fragmen menandakan draf tanpa bantuan |
 | **B. Pendukung** | cosmology bab4, Fuel Design, PR inti | 2011 | catatan kuliah, register ekspositori |
-| **B. Pendukung** | Cara membuat yoghurt | 2009 | blog, satu-satunya sampel semi-formal |
+| **B. Pendukung** | Cara membuat yoghurt | 2009 | blog, sampel semi-formal pertama |
+| **A. Patokan** | Opini informal PLTN | 2026 | penulis menyatakan ditulis tanpa AI (31 Oktober 2026); GPTZero 4.1m human 98 persen |
 | **C. Perlu dipastikan** | Paper SNIV | ? | metrik cocok pita A, tapi tahun terbit belum diketahui |
 | **D. Tidak dipakai** | Jurnal Pengmas Pade | 2025 | dikonfirmasi banyak dipengaruhi AI |
 | **D. Tidak dipakai** | Prosiding ED PCO | 2021 | penulis pertama Syamsudin, lihat bagian 0.1 |
@@ -56,7 +57,7 @@ kemudian hari penyuntingan menghasilkan angka yang mendekati kolom kanan, preset
 persen human. Keduanya tulisan manusia, pra-2022. Bagian yang ditandai AI pada SNIV
 adalah blok afiliasi dan daftar pustaka, bukan prosanya.
 
-Konsekuensinya, sasaran skor untuk teks hasil penyuntingan adalah pita 80 sampai 98
+Karena itu, sasaran skor untuk teks hasil penyuntingan adalah pita 80 sampai 98
 persen human, bukan 100 persen. Hasil ini juga memperkuat status `Paper_SNIV` sebagai
 tulisan tanpa bantuan AI, meski pertanyaan tahun terbitnya tetap terbuka karena detektor
 tidak dapat menjawabnya.
@@ -230,6 +231,24 @@ Dipakai saat mengajak pembaca menelusuri perhitungan, bahkan di dalam paper.
 Untuk pelaku penelitian dipakai *kami*, tidak pernah *penulis* di badan teks. *Penulis*
 hanya muncul di bagian Ucapan Terima Kasih.
 
+**Pembaruan 7 November 2026 [K], menggantikan pembaruan 26 Oktober 2026.** Pada register
+`akademik` dan `ajar`, termasuk esai akademik, *saya* tidak dipakai. Penulis menilai *saya*
+kurang tepat untuk tulisan akademik karena mengurangi kesan objektif dan netral, dan banyak
+pedoman institusi meminta kata ganti lain. Penggantinya, urut dari yang paling diutamakan:
+
+1. Kalimat pasif bila pelakunya tidak penting: "Saya mengolah data dengan ..." menjadi "Data
+   diolah dengan ...".
+2. *penulis* atau *peneliti* bila pelakunya perlu disebut: "Penulis membahas ...",
+   "Peneliti menggunakan metode kualitatif ...".
+3. *kami* untuk tim peneliti pada paper berpenulis banyak, sesuai kebiasaan korpus di atas.
+
+*kita* inklusif tetap dipakai untuk penalaran bersama pembaca ("Bila kita hitung mundur dari
+2032"), terutama pada register `ajar`. Kutipan langsung yang memuat *saya* dibiarkan utuh.
+
+Pengecualian hanya untuk register `semiformal` yang memang dituturkan penulis sebagai orang
+pertama, misalnya komentar media sosial dan opini informal. Di sana *saya* tetap sah,
+seperti pada "Pengalaman *saya* ini" di bagian 2.16.
+
 ### 2.9 Kalimat panjang dibangun lewat subordinasi **[K][S]**
 
 Korpus memakai kalimat 28 kata ke atas pada 8,3 sampai 14,9 persen kalimat, dengan
@@ -324,11 +343,34 @@ skenario itu ...", "*Kemudian*, timbal tidak tembus pandang", "*Namun ada masala
 lainnya*, bismut ...", dan "*Selain itu* terdapat kendala ...". Dua pola ikutan juga
 terlihat. Pertama, kopula *adalah* dipakai untuk daftar dan definisi, bukan titik dua
 ("Yang masih layak didiskusikan itu adalah terkait ..."). Kedua, dokumen tidak dijadikan
-pelaku: "Tulisan ini membahas" menjadi "Pada tulisan ini kita akan membahas".
+pelaku: "Tulisan ini membahas" menjadi "Pada tulisan ini kita akan membahas". Sejak
+7 November 2026, bentuk itu hanya untuk register `ajar`. Pada register `akademik`,
+gantinya "Pada tulisan ini dibahas ..." atau "Penulis membahas ..." (bagian 2.8).
+
+Pola yang sama muncul lagi pada esai PLTN (26 Oktober 2026). Kalimat berkopula "Yang baru
+adalah Peraturan Pemerintah Nomor 40 Tahun 2025" diganti penulis menjadi "*Kemudian* ada
+peraturan terbaru melalui Peraturan Pemerintah Nomor 40 Tahun 2025". Pembuka *Yang baru
+adalah X* (kalke dari *What is new is X*) diganti kalimat berpenghubung yang menyebut
+urutan waktunya.
 
 Dari empat penghubung itu, *Sedangkan* di awal kalimat tergolong tidak baku dan sebaiknya
 diganti. Penulis juga menyetujui penggantian *Akibatnya* yang berulang dengan *Karena
 itu*, dan menolak *Konsekuensinya* karena terlalu terasa AI.
+
+Esai FCEV (26 Oktober 2026) memberi bukti detektor yang kedua untuk pola ini. *Hanya saja
+jaraknya masih lebih dari tiga puluh tahun.* dan *Manfaat lingkungannya pun jauh berkurang.*
+terbaca manusiawi oleh GPTZero, sedangkan *Skalanya saja yang masih sangat kecil.* dan
+*Standar itu belum sepenuhnya tersedia di dalam negeri.* ditandai AI. Penghubung yang hanya
+menempel pada kalimat tanpa isi tidak menolong, karena *Kemudian ada tantangan
+infrastruktur.* tetap ditandai AI (lihat D8 `id-ai-tells.md`).
+
+**Catatan 31 Oktober 2026 [T].** Pada tulisan opini informal yang ditulis sendiri tanpa
+AI, penulis justru memakai sembilan kalimat pendek tanpa penghubung (*Banyak juga yang
+harus dihitung dan didesain.*), dan teksnya tetap mendapat human 98 persen. Bagian ini
+karena itu menggambarkan cara penulis menyunting teks model, bukan larangan bagi kalimat
+pendek. Kalimat pendek lepas ditandai AI pada teks model, tetapi tidak pada tulisan
+penulis. Penyebabnya kemungkinan ada pada gerombolan pola lain di teks model, bukan pada
+kalimat pendeknya sendiri.
 
 ### 2.16 Klaim dibuat tepat dan berpihak bila faktanya demikian **[S]**
 
@@ -384,6 +426,7 @@ kemunculannya berarti sisipan model.
 | Pembuka formula (*Seiring dengan perkembangan teknologi*) | ganti pernyataan spesifik |
 | Penutup formula (*Dengan demikian dapat disimpulkan bahwa*) | tutup dengan temuan konkret |
 | Triplet berima (*efektif, efisien, berkelanjutan*) | sisakan satu |
+| Daftar tepat tiga butir yang semuanya bermakna, dan deret empat butir berbentuk kata seragam | salah satu dari empat tindakan D3 `id-ai-tells.md` |
 | *yang mana* dan *dimana* sebagai pronomina relatif | ganti *sehingga*, *yang*, atau pecah kalimat |
 | Intensifier kosong (*berperan vital*, *menjadi faktor kunci*) | hapus atau ganti angka |
 | Klaim tanpa angka atau rujukan gambar | tambahkan dasar, atau turunkan jadi dugaan |
@@ -393,7 +436,7 @@ kemunculannya berarti sisipan model.
 | Penutup punchline, aforisme, atau paralelisme retoris | tutup dengan fakta atau pengakuan batas (2.14) |
 | *Konsekuensinya* sebagai penghubung | *Karena itu* atau *Akibatnya* |
 | *Sedangkan* di awal kalimat | gabungkan ke kalimat sebelumnya, atau *Sebaliknya* |
-| Dokumen sebagai pelaku (*Tulisan ini membahas*) | *Pada tulisan ini kita akan membahas* |
+| Dokumen sebagai pelaku (*Tulisan ini membahas*) | akademik: *Pada tulisan ini dibahas* atau *Penulis membahas*; ajar: *Pada tulisan ini kita akan membahas* |
 | Kiasan halus (*paling kokoh*, *menyempit*, *terjawab*, *dipinjam*) | kata teknis yang literal (2.17) |
 | Kontras *bukan X* di ujung kalimat | hapus, atau jadikan kalimat tersendiri bila memang penting |
 | Penyangkalan antisipatif (*X, bukan berarti Y*; *bukan sekadar X, melainkan Y*) | nyatakan isinya secara positif |
@@ -450,7 +493,7 @@ sebagai batas yang diketahui, bukan sebagai kekurangan yang tertunda.
 |---|---|---|
 | Akademik jurnal | **memadai** untuk kerja awal, 2 dokumen bersih 2021 sampai 2022 | 2 sampai 3 paper lagi 2023 ke atas, penulis tunggal atau bagian sendiri ditandai |
 | Bahan ajar | **kosong**, cosmology bab4 hanya proksi catatan baca | 2 sampai 3 bab modul atau diktat terkini |
-| Semi-formal | 1 dokumen 2009 ditambah 4 suntingan latihan Oktober 2026 | 5 sampai 10 surel atau laporan internal; blog bukan pengganti surel |
+| Semi-formal | 1 dokumen 2009, 1 opini informal 2026 tanpa AI, dan 4 suntingan latihan Oktober 2026 | 5 sampai 10 surel atau laporan internal; blog bukan pengganti surel |
 | Proposal internal | **rintisan**, 1 dokumen 166 kata | 3 sampai 5 abstrak proposal atau laporan kemajuan pra-2023 |
 | Dokumen kelembagaan | **kosong** | proposal S3 Terapan, dokumen akreditasi, RPS |
 
@@ -477,10 +520,18 @@ Dicatat agar tidak diulang.
 | Deret pembuka seragam adalah tell | Diukur lintas korpus | **Sebagian.** Nyata tapi korpus penulis lebih parah, jadi tanpa ambang |
 | Koordinasi klausa berlebih adalah tell | Diukur lintas korpus | **Sebagian.** Kontrol manusia 1,50 dan tetap 100 persen |
 | Pemampatan berlebih menjauhkan dari suara penulis | Suntingan penulis atas teks buatan | **Bertahan.** Semua suntingan menambah kelonggaran |
-
 | Kepadatan pemadat menentukan skor detektor | v5 longgar (pemadat 122, dalam rentang korpus) dipindai | **Gugur.** 1 persen human, setara v4 yang mampat |
+| Aturan gaya tidak menggerakkan skor detektor | Esai PLTN dengan fakta sama, dengan dan tanpa skill, 26 Oktober 2026 | **Gugur.** AI 89 persen tanpa skill, 32 persen dengan skill |
+| Atribusi ke lembaga atau orang tidak membantu skor | Rincian per kalimat esai FCEV, 26 Oktober 2026 | **Gugur pada tingkat kalimat.** Kalimat ESDM bertanggal satu-satunya *High Human*, kalimat Hary Devianto *Medium*; skor dokumen tetap tidak ditentukan atribusi |
+| Pola terlarang di skill membuat teks terbaca AI | Opini informal penulis tanpa AI dengan *Mari kita*, *Sedangkan*, *yang mana*, 9 kalimat pendek lepas, dan 1 triplet, 31 Oktober 2026 | **Gugur untuk tulisan manusia.** Human 98 persen. Pola itu menjadi tell karena frekuensinya pada keluaran model |
 
-Catatan penutup detektor, setelah tujuh pengukuran: teks buatan mendarat di 1 sampai 2
-persen apa pun setelan gayanya, tulisan penulis di 80 sampai 100 persen, dan satu-satunya
-yang pernah berada di tengah (45 persen) adalah teks buatan yang disunting tangan
-penulis. Sumbu yang membedakan bukan gaya yang dapat disetel. Berhenti mencari kenopnya.
+Catatan penutup detektor, setelah empat belas pengukuran. Pada tujuh pengukuran Agustus
+2026, teks buatan mendarat di 1 sampai 2 persen human apa pun setelan gayanya, tulisan
+penulis di 80 sampai 100 persen, dan yang berada di tengah (45 persen) hanya teks buatan
+yang disunting tangan penulis. Pengukuran 26 Oktober 2026 mengubah gambaran itu, karena
+esai PLTN buatan skill 1.6 mendapat 59 sampai 60 persen human dan esai fuel cell yang
+tidak disunting hanya AI 4 persen.
+Esai FCEV buatan skill 1.7, juga tanpa suntingan, mendapat human 68 persen, sedangkan
+tulisan opini penulis tentang PLTN tanpa AI mendapat human 98 persen. Penyebab pastinya belum diketahui, dan rinciannya ada
+di bagian Detektor pihak ketiga pada SKILL.md. Aturan utamanya tetap sama: suara penulis
+menang atas skor.

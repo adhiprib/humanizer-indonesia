@@ -1,7 +1,7 @@
 # Tell AI dalam Teks Bahasa Indonesia
 
-Modul referensi untuk skill `humanizer`. Dimuat hanya ketika teks masukan berbahasa
-Indonesia. Katalog di SKILL.md induk diturunkan dari pola bahasa Inggris dan tidak
+Modul referensi untuk skill `humanizer-indonesia`. Dimuat hanya ketika teks masukan berbahasa
+Indonesia. Katalog skill `humanizer` (skill asal) diturunkan dari pola bahasa Inggris dan tidak
 berlaku di sini. Jangan mencari em dash, "vibrant tapestry", atau rule of three versi
 Inggris pada teks Indonesia.
 
@@ -95,6 +95,34 @@ pergerakan fluida.
 
 **Sesudah:** Efisiensinya turun karena hal ini.
 
+### A6. Preposisi yang menghilangkan subjek
+
+Kalimat dibuka *Dalam*, *Pada*, atau *Bagi*, lalu langsung disusul verba aktif. Frasa
+pembukanya menjadi keterangan, sehingga kalimat itu tidak lagi punya subjek. Kesalahan ini
+lazim pada tulisan manusia maupun keluaran model, dan sering muncul ketika dua kalimat
+digabung tanpa membaca ulang.
+
+**Sebelum:** Dalam penelitian ini menunjukkan bahwa sistem dapat menyimpan berkas.
+
+**Sesudah:** Penelitian ini menunjukkan bahwa sistem dapat menyimpan berkas. Bila
+keterangannya ingin dipertahankan, pakai pasif: Dalam penelitian ini ditunjukkan bahwa ...
+
+Bentuk yang sudah bersubjek (*Pada penelitian ini, kami menunjukkan ...*) tidak disunting.
+`scripts/metrik.py` menghitungnya sejak 7 November 2026.
+
+### A7. Konjungsi berpasangan
+
+Konjungsi subordinatif di anak kalimat tidak dipasangkan lagi dengan konjungsi di induk
+kalimat. Pola *Meskipun ..., tetapi ...*, *Walaupun ..., namun ...*, dan *Karena ...,
+maka ...* adalah kalke dari kebiasaan bahasa daerah atau dari *although ..., but ...*.
+Pilih salah satu konjungsinya.
+
+**Sebelum:** Meskipun akurasinya tinggi, tetapi galat masih muncul pada data minoritas.
+
+**Sesudah:** Meskipun akurasinya tinggi, galat masih muncul pada data minoritas.
+
+*Jika ..., maka ...* sengaja tidak dihitung karena lazim pada rumusan matematika dan logika.
+
 ---
 
 ## B. Leksikal
@@ -124,6 +152,31 @@ di luar konteks statistik, *krusial*, *esensial*, *fundamental*, *masif*.
 
 Catatan: dalam teks teknis, *signifikan* dengan nilai-p adalah pemakaian sah. Jangan
 diratakan.
+
+### B4. Modalitas bertumpuk dan derajat kepastian yang bergeser
+
+Satu klausa cukup membawa satu penanda ketidakpastian. *mungkin dapat berpotensi
+menurunkan* dipadatkan menjadi *berpotensi menurunkan* atau *dapat menurunkan*, dipilih
+sesuai tingkat buktinya.
+
+Derajat kepastian kira-kira berjenjang begini. Fakta empiris memakai *menunjukkan* dan
+*menghasilkan*, inferensi memakai *mengindikasikan* dan *berkorelasi dengan*, sedangkan
+hipotesis memakai *diduga*, *diproyeksikan*, dan *berpotensi*. Penyuntingan tidak boleh
+menggeser jenjang itu ke arah mana pun. *Mengindikasikan* tidak diganti *membuktikan*,
+*diharapkan dapat membantu* tidak diganti *terbukti membantu*, dan hasil pengujian yang
+sudah terukur tidak diturunkan menjadi *diduga menunjukkan*. Bila jenjang aslinya keliru
+terhadap datanya, catat di poin konfirmasi (Langkah 8 SKILL.md) dan biarkan penulis yang
+memutuskan.
+
+### B5. Otoritas tanpa rujukan dan klaim mutlak
+
+*Banyak peneliti sepakat bahwa ...*, *para ahli menyatakan ...*, dan *berbagai studi
+menunjukkan ...* tanpa satu sitasi pun adalah cara model menyatakan klaim umum dengan nada
+berwibawa. Jangan mengarang sitasinya. Pindahkan ke poin konfirmasi dengan catatan bahwa
+klaim itu perlu rujukan, atau ubah menjadi klaim yang memang dapat ditanggung naskahnya.
+
+Hal yang sama berlaku untuk kata mutlak *pasti*, *selalu*, *tidak pernah*, dan *tanpa
+cacat* yang tidak disertai data.
 
 ---
 
@@ -185,6 +238,51 @@ Versi Indonesia dari rule of three: *efektif, efisien, dan berkelanjutan*; *cepa
 dan akurat*; *aman, nyaman, dan andal*. Bila ketiganya tidak membawa informasi berbeda,
 sisakan satu.
 
+Pada teks ajar dan teks teknis, ketiga butir sering sama-sama bermakna, dan GPTZero tetap
+menandainya sebagai *Everything in threes*. Bab 9 diktat perubahan iklim (31 Oktober 2026)
+ditandai empat kali walaupun tidak satu butir pun yang kosong. Daftar tiga butir semacam
+itu ditangani dengan salah satu dari empat tindakan berikut, seluruhnya diambil dari kasus
+Bab 9 itu.
+
+| Tindakan | Sebelum | Sesudah |
+|---|---|---|
+| Buang butir yang tidak membawa informasi baru | *efektif, efisien, dan berkelanjutan* | sisakan satu, atau ganti dengan angka |
+| Nyatakan hierarki yang tersembunyi | menjelaskan peran atmosfer, sirkulasi udara, dan arus laut di dalam sistem iklim bumi | menjelaskan peran atmosfer dan laut di dalam sistem iklim bumi, termasuk sirkulasi udara dan arus laut |
+| Pindahkan butir yang hubungannya berbeda ke kalimat sendiri | dapat dipicu oleh berkurangnya gas rumah kaca, letusan gunung api besar, atau perubahan aktivitas matahari | Dalam sejarah bumi, pendinginan semacam itu pernah dipicu oleh letusan gunung api besar atau perubahan aktivitas matahari. Berkurangnya gas rumah kaca di atmosfer juga dapat memicunya. |
+| Pecah kompetensi yang digabung dan sebut urutan kerjanya | Menjelaskan peran penggunaan energi sebagai sumber utama emisi, menghitung emisi CO2 dari pembakaran bahan bakar, dan menguraikan pertumbuhan emisi dengan identitas Kaya. | 4. Menjelaskan peran penggunaan energi sebagai sumber utama emisi. 5. Menghitung emisi CO2 dari pembakaran bahan bakar, lalu menguraikan pertumbuhannya dengan identitas Kaya. |
+
+Pada contoh kedua, sirkulasi udara adalah bagian dari atmosfer dan arus laut bagian dari
+laut, sehingga daftar aslinya memang tidak sejajar. Menyatakan hierarkinya menghapus
+triplet sekaligus membuat isinya lebih tepat. Pada contoh keempat, bila capaian
+pembelajaran diambil dari RPS, pemecahannya ikut mengubah RPS dan menjadi keputusan
+penulis.
+
+**Deret sejajar.** Deret empat butir yang kata pertamanya berbentuk seragam juga ditandai,
+misalnya *meningkatnya suhu udara, berubahnya curah hujan, naiknya muka air laut, dan
+meningkatnya intensitas kejadian ekstrem*. Pecah bentuknya menjadi klausa yang berpasangan:
+*Suhu udara dan muka air laut naik, sementara pola curah hujan berubah dan intensitas
+kejadian ekstrem meningkat.* Bila deret itu dirujuk kembali dengan nomor (*fenomena
+keempat*), jadikan daftar bernomor.
+
+**Yang tidak ditandai dan tidak perlu disunting.** Daftar istilah empat butir ke atas yang
+bentuknya beragam, misalnya *cuaca, iklim, pemanasan global, dan perubahan iklim* atau
+*suhu, curah hujan, angin, muka air laut, dan kejadian ekstrem*, lolos dari GPTZero pada
+bab yang sama. Daftar panjang semacam itu juga kebiasaan penulis (bagian 2.2
+`voice-prib-id.md`).
+
+`scripts/metrik.py` menghitung triplet dan deret sejajar sebagai diagnostik tanpa ambang.
+Setelah perbaikan 31 Oktober 2026, temuan skrip sama persis dengan GPTZero pada tiga teks
+yang sudah dipindai: Bab 9 empat lawan empat, esai FCEV nol lawan nol, dan tulisan opini
+penulis satu lawan satu. Tetap tinjau tiap temuan sebelum menyunting.
+
+**Triplet adalah soal frekuensi.** Penulis sendiri menulis triplet secara otomatis
+(*seperti panas bumi, solar, dan angin*) pada tulisan opini tanpa AI yang mendapat human
+98 persen. GPTZero memberi label *1.6x more likely used by AI*, yang berarti manusia juga
+memakainya, hanya lebih jarang. Patokan sementara dari tulisan itu adalah sekitar 1,5
+triplet per 1.000 kata. Angka ini baru berasal dari satu teks, jadi tentatif. Yang
+ditangani adalah gerombolan triplet, seperti empat temuan dalam sekitar 200 kata pada
+potongan Bab 9, bukan satu triplet yang muncul sesekali.
+
 ### D4. Enumerasi bersandar *seperti*
 
 Model gemar memasang contoh berderet di belakang kata *seperti*, *antara lain*,
@@ -219,10 +317,64 @@ diajukan pembaca, lalu menyelipkan maksud sebenarnya lewat kontras. Penulis meni
 sebagai AI slop yang paling mudah dikenali (24 Oktober 2026). Nyatakan isinya secara
 positif. Sasaran nol per dokumen, dan `scripts/metrik.py` menghitungnya.
 
+### D8. Kalimat pembuka penanda arah
+
+Kalimat pembuka paragraf yang hanya mengumumkan topik, misalnya *Kemudian ada tantangan
+infrastruktur.* atau *Peluang yang menurut saya paling kuat datang dari sumber energinya.*
+Isinya dapat dihapus tanpa ada informasi yang hilang. Pada esai FCEV (26 Oktober 2026),
+kalimat semacam ini menjadi sumber kalimat AI terbanyak, termasuk yang sudah dibuka kata
+penghubung. Satukan dengan fakta pertama paragraf itu. Pola ini kerabat dekat D5, dan
+`scripts/metrik.py` belum menghitungnya.
+
 ### D6. Penomoran dan bullet yang tidak perlu
 
 Teks AI memecah prosa jadi daftar bahkan ketika hubungan antarbutirnya naratif. Dalam
 buku ajar dan jurnal, gabungkan kembali jadi paragraf kecuali butirnya memang paralel.
+
+### D9. Sitasi formulaik
+
+Model merangkai sitasi dengan pola yang sama berulang kali: *Menurut Santoso (2020) ...
+Senada dengan itu, Wijaya (2021) ... Menurut Nugroho (2022) ...*. Tiap kalimat dibuka nama
+peneliti, dan hubungan antartemuan hanya dinyatakan lewat *senada* atau *sejalan*.
+
+Fokuskan kalimat pada temuannya, lalu pindahkan nama dan tahun ke dalam kurung. Rujukan
+yang menyatakan hal yang sama digabung dalam satu kurung, misalnya *(Santoso, 2020; Wijaya,
+2021)*. Bila temuannya berbeda, sebut perbedaannya, karena di situlah sintesisnya.
+
+Yang boleh diubah hanya posisi sitasi di dalam kalimat. Isi temuan, nama, tahun, dan
+urutan rujukan dibawa utuh, sesuai prinsip dasar nomor 2 di SKILL.md. Gaya naratif yang
+dipakai konsisten dan memang diminta jurnal dibiarkan (F8).
+
+`scripts/metrik.py` menghitung frasa *senada dengan itu* dan kerabatnya, serta kalimat
+berpola *Menurut Nama (tahun)* bila jumlahnya tiga atau lebih.
+
+### D10. Rujukan spasial semu
+
+*Dapat dilihat pada tabel di bawah ini* dan *Berdasarkan grafik di atas* menunjuk posisi,
+padahal posisi tabel dan gambar berpindah ketika tata letak berubah. Rujuk dengan nomor:
+*Tabel 4.2 menyajikan ...*, atau *Hasil pengujian (Gambar 3.1) menunjukkan ...*.
+
+Bila naskah aslinya belum memberi nomor, **jangan mengarang nomornya.** Tulis catatan di
+poin konfirmasi, misalnya "tabel hasil pengujian belum bernomor, beri nomor lalu rujuk",
+dan biarkan penulis menetapkannya.
+
+### D11. Residu percakapan dan format dekoratif
+
+Sisa percakapan model yang ikut tersalin ke naskah: *Tentu, berikut draf revisinya*,
+*Semoga membantu*, *Jangan ragu untuk ...*. Hapus seluruhnya. Pada teks akademik dan
+laporan resmi, emoji, simbol dekoratif, dan cetak tebal acak di tengah paragraf juga
+dibuang. Cetak tebal hanya untuk istilah yang sedang didefinisikan.
+
+Judul bagian berbentuk pertanyaan retoris atau bergaya artikel populer (*Mengapa Timbal?
+Jawabannya Mengejutkan*) diganti frasa deskriptif berbasis topik, kecuali registernya
+memang populer.
+
+### D12. Rentang semu
+
+*mulai dari X hingga Y* hanya sah bila X dan Y memang ujung suatu spektrum yang nyata,
+misalnya rentang daya atau rentang suhu. Bila X dan Y hanya dua contoh yang tidak berada
+pada satu skala, sebut keduanya secara langsung. `scripts/metrik.py` menghitungnya sebagai
+diagnostik, dan sebagian besar temuan pada teks teknis sah.
 
 ---
 
@@ -264,6 +416,21 @@ dalam penulisan ilmiah untuk menunjuk gambar, tabel, dan penelitian terdahulu.
 **F7. Register formal itu sendiri.** Bahasa Indonesia akademik memang lebih formal
 daripada bahasa Inggris akademik. Sasarannya bukan membuat jurnal terdengar seperti blog,
 melainkan menghilangkan padding sambil mempertahankan register.
+
+**F8. Sitasi naratif yang menjadi konvensi jurnal.** Bila penulis memakai *Nugroho (2022)
+menemukan ...* secara konsisten dan gaya itu yang diminta jurnal, D9 tidak dijalankan.
+
+**F9. Kesejajaran gramatikal di dalam daftar.** Butir satu daftar memang harus berbentuk
+sama secara tata bahasa. *mengumpulkan data, analisis hasil, dan menguji model* keliru
+karena mencampur nomina dengan verba. Ini tidak bertentangan dengan deret sejajar di D3:
+yang ditandai D3 adalah deret empat butir ke atas yang dibuka nominalisasi seragam
+(*meningkatnya ..., berubahnya ...*), dan perbaikannya mengubah deret itu menjadi klausa
+sehingga bentuk butirnya tetap sejajar.
+
+**F10. Partikel *pun* pada konjungsi baku.** *meskipun*, *walaupun*, *kendatipun*,
+*maupun*, *adapun*, *bagaimanapun*, dan *sekalipun* (sebagai konjungsi) ditulis serangkai.
+Hanya *pun* sesudah kata tanya dan nomina yang ditulis terpisah: *apa pun*, *siapa pun*,
+*data ini pun*.
 
 
 ---
