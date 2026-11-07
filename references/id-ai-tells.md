@@ -39,7 +39,7 @@ mengalami peningkatan sebesar 12%.
 
 **Sesudah:** Laju perpindahan kalor yang terukur naik 12%.
 
-Ambang: bila lebih dari 1 konstruksi verba ringan per 100 kata, tandai.
+Ambang: jika lebih dari 1 konstruksi verba ringan per 100 kata, tandai.
 
 ### A2. Pasif refleks
 
@@ -104,7 +104,7 @@ digabung tanpa membaca ulang.
 
 **Sebelum:** Dalam penelitian ini menunjukkan bahwa sistem dapat menyimpan berkas.
 
-**Sesudah:** Penelitian ini menunjukkan bahwa sistem dapat menyimpan berkas. Bila
+**Sesudah:** Penelitian ini menunjukkan bahwa sistem dapat menyimpan berkas. Jika
 keterangannya ingin dipertahankan, pakai pasif: Dalam penelitian ini ditunjukkan bahwa ...
 
 Bentuk yang sudah bersubjek (*Pada penelitian ini, kami menunjukkan ...*) tidak disunting.
@@ -139,7 +139,7 @@ Pilih salah satu konjungsinya.
 utama*, *menjadi faktor kunci*, *berperan vital*, *aspek vital*, *tak lepas dari*,
 *semakin krusial*, *patut diperhatikan*, *menjadi sorotan*, *di tengah derasnya*.
 
-Uji: hapus frasanya. Bila maknanya utuh, buang.
+Uji: hapus frasanya. Jika maknanya utuh, buang.
 
 Pada register akademik, *mengupas* dan *mengupas tuntas* bernada jurnalistik. Pakai
 *membahas* atau *menguraikan*.
@@ -164,7 +164,7 @@ Derajat kepastian kira-kira berjenjang begini. Fakta empiris memakai *menunjukka
 hipotesis memakai *diduga*, *diproyeksikan*, dan *berpotensi*. Penyuntingan tidak boleh
 menggeser jenjang itu ke arah mana pun. *Mengindikasikan* tidak diganti *membuktikan*,
 *diharapkan dapat membantu* tidak diganti *terbukti membantu*, dan hasil pengujian yang
-sudah terukur tidak diturunkan menjadi *diduga menunjukkan*. Bila jenjang aslinya keliru
+sudah terukur tidak diturunkan menjadi *diduga menunjukkan*. Jika jenjang aslinya keliru
 terhadap datanya, catat di poin konfirmasi (Langkah 8 SKILL.md) dan biarkan penulis yang
 memutuskan.
 
@@ -205,7 +205,7 @@ paragraf dibuka konektor, tandai.
 
 ### C2. Informasi baru diletakkan di depan
 
-Bahasa Indonesia mengalir bila tiap kalimat dibuka dengan informasi yang sudah dikenal
+Bahasa Indonesia mengalir jika tiap kalimat dibuka dengan informasi yang sudah dikenal
 pembaca dari kalimat sebelumnya. Teks AI sering membalik urutan itu, dan hasilnya terasa
 melompat meski tata bahasanya benar.
 
@@ -235,7 +235,7 @@ kalimat yang mengulang judul dan menyebut sesuatu itu *sangat penting*.
 ### D3. Triplet
 
 Versi Indonesia dari rule of three: *efektif, efisien, dan berkelanjutan*; *cepat, tepat,
-dan akurat*; *aman, nyaman, dan andal*. Bila ketiganya tidak membawa informasi berbeda,
+dan akurat*; *aman, nyaman, dan andal*. Jika ketiganya tidak membawa informasi berbeda,
 sisakan satu.
 
 Pada teks ajar dan teks teknis, ketiga butir sering sama-sama bermakna, dan GPTZero tetap
@@ -253,7 +253,7 @@ Bab 9 itu.
 
 Pada contoh kedua, sirkulasi udara adalah bagian dari atmosfer dan arus laut bagian dari
 laut, sehingga daftar aslinya memang tidak sejajar. Menyatakan hierarkinya menghapus
-triplet sekaligus membuat isinya lebih tepat. Pada contoh keempat, bila capaian
+triplet sekaligus membuat isinya lebih tepat. Pada contoh keempat, jika capaian
 pembelajaran diambil dari RPS, pemecahannya ikut mengubah RPS dan menjadi keputusan
 penulis.
 
@@ -261,7 +261,7 @@ penulis.
 misalnya *meningkatnya suhu udara, berubahnya curah hujan, naiknya muka air laut, dan
 meningkatnya intensitas kejadian ekstrem*. Pecah bentuknya menjadi klausa yang berpasangan:
 *Suhu udara dan muka air laut naik, sementara pola curah hujan berubah dan intensitas
-kejadian ekstrem meningkat.* Bila deret itu dirujuk kembali dengan nomor (*fenomena
+kejadian ekstrem meningkat.* Jika deret itu dirujuk kembali dengan nomor (*fenomena
 keempat*), jadikan daftar bernomor.
 
 **Yang tidak ditandai dan tidak perlu disunting.** Daftar istilah empat butir ke atas yang
@@ -296,8 +296,8 @@ Bedakan dua fungsi, karena hanya satu yang perlu disunting:
 | Enumerasi | Bahan bubuk seperti sodium sulfat, NaCl, EDTA 4NA, dan sitrus | tandai, pertimbangkan bentuk lain |
 | Komparatif atau rujukan | seperti yang ditunjukkan pada Gambar 2 | **biarkan**, ini konstruksi sah |
 
-Penggantinya bergantung isi. Bila daftarnya penting dan paralel, pakai daftar bernomor
-terpisah. Bila hanya ilustrasi, sebut satu contoh terkuat lalu buang sisanya. Bila
+Penggantinya bergantung isi. Jika daftarnya penting dan paralel, pakai daftar bernomor
+terpisah. Jika hanya ilustrasi, sebut satu contoh terkuat lalu buang sisanya. Jika
 seluruh anggota memang perlu, jadikan objek langsung tanpa *seperti*: "Bahan bubuknya
 sodium sulfat, NaCl, EDTA 4NA, dan sitrus."
 
@@ -339,14 +339,14 @@ peneliti, dan hubungan antartemuan hanya dinyatakan lewat *senada* atau *sejalan
 
 Fokuskan kalimat pada temuannya, lalu pindahkan nama dan tahun ke dalam kurung. Rujukan
 yang menyatakan hal yang sama digabung dalam satu kurung, misalnya *(Santoso, 2020; Wijaya,
-2021)*. Bila temuannya berbeda, sebut perbedaannya, karena di situlah sintesisnya.
+2021)*. Jika temuannya berbeda, sebut perbedaannya, karena di situlah sintesisnya.
 
 Yang boleh diubah hanya posisi sitasi di dalam kalimat. Isi temuan, nama, tahun, dan
 urutan rujukan dibawa utuh, sesuai prinsip dasar nomor 2 di SKILL.md. Gaya naratif yang
 dipakai konsisten dan memang diminta jurnal dibiarkan (F8).
 
 `scripts/metrik.py` menghitung frasa *senada dengan itu* dan kerabatnya, serta kalimat
-berpola *Menurut Nama (tahun)* bila jumlahnya tiga atau lebih.
+berpola *Menurut Nama (tahun)* jika jumlahnya tiga atau lebih.
 
 ### D10. Rujukan spasial semu
 
@@ -354,7 +354,7 @@ berpola *Menurut Nama (tahun)* bila jumlahnya tiga atau lebih.
 padahal posisi tabel dan gambar berpindah ketika tata letak berubah. Rujuk dengan nomor:
 *Tabel 4.2 menyajikan ...*, atau *Hasil pengujian (Gambar 3.1) menunjukkan ...*.
 
-Bila naskah aslinya belum memberi nomor, **jangan mengarang nomornya.** Tulis catatan di
+Jika naskah aslinya belum memberi nomor, **jangan mengarang nomornya.** Tulis catatan di
 poin konfirmasi, misalnya "tabel hasil pengujian belum bernomor, beri nomor lalu rujuk",
 dan biarkan penulis menetapkannya.
 
@@ -371,8 +371,8 @@ memang populer.
 
 ### D12. Rentang semu
 
-*mulai dari X hingga Y* hanya sah bila X dan Y memang ujung suatu spektrum yang nyata,
-misalnya rentang daya atau rentang suhu. Bila X dan Y hanya dua contoh yang tidak berada
+*mulai dari X hingga Y* hanya sah jika X dan Y memang ujung suatu spektrum yang nyata,
+misalnya rentang daya atau rentang suhu. Jika X dan Y hanya dua contoh yang tidak berada
 pada satu skala, sebut keduanya secara langsung. `scripts/metrik.py` menghitungnya sebagai
 diagnostik, dan sebagian besar temuan pada teks teknis sah.
 
@@ -417,7 +417,7 @@ dalam penulisan ilmiah untuk menunjuk gambar, tabel, dan penelitian terdahulu.
 daripada bahasa Inggris akademik. Sasarannya bukan membuat jurnal terdengar seperti blog,
 melainkan menghilangkan padding sambil mempertahankan register.
 
-**F8. Sitasi naratif yang menjadi konvensi jurnal.** Bila penulis memakai *Nugroho (2022)
+**F8. Sitasi naratif yang menjadi konvensi jurnal.** Jika penulis memakai *Nugroho (2022)
 menemukan ...* secara konsisten dan gaya itu yang diminta jurnal, D9 tidak dijalankan.
 
 **F9. Kesejajaran gramatikal di dalam daftar.** Butir satu daftar memang harus berbentuk

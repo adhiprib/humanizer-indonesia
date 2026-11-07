@@ -400,6 +400,8 @@ def periksa_kaidah(kal, body):
     h["rentang_semu"] = [m.group(0) for m in POLA_RENTANG_SEMU.finditer(body)]
     tanpa_kutipan = re.sub(r'["\u201c][^"\u201d]*["\u201d]', " ", body)
     h["saya"] = [k[:70] for k in pecah_kalimat(tanpa_kutipan) if re.search(r"\b(?:saya|aku|ku)\b", k, re.I)]
+    h["bila"] = [k[:70] for k in pecah_kalimat(tanpa_kutipan)
+                 if re.search(r"\bbila\b", k, re.I) and not k.rstrip().endswith("?")]
     return h
 
 
@@ -414,6 +416,7 @@ LABEL_KAIDAH = [
     ("residu_bot", "Residu percakapan chatbot (Tentu, berikut; Semoga membantu)"),
     ("rentang_semu", "Rentang semu (mulai dari X hingga Y)"),
     ("saya", "Kata ganti saya di luar kutipan (hanya preset akademik dan ajar)"),
+    ("bila", "Konjungsi bila, ganti jika atau apabila (hanya preset akademik dan ajar)"),
 ]
 
 
@@ -477,7 +480,7 @@ def cetak(m, nama_preset):
     print("  Kaidah dan wacana (tambahan 7 November 2026, tanpa ambang, sasaran 0 kecuali")
     print("  rentang semu dan sitasi naratif yang memang konvensi jurnal):")
     for kunci, label in LABEL_KAIDAH:
-        if kunci == "saya" and nama_preset == "semiformal":
+        if kunci in ("saya", "bila") and nama_preset == "semiformal":
             continue
         isi = m["kaidah"][kunci]
         print("    %-74s %d" % (label, len(isi)))

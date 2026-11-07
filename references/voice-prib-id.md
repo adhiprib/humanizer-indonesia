@@ -32,7 +32,7 @@ terbit karena itu menjadi syarat kelayakan.
 | **D. Tidak dipakai** | Paten S00202110995 | 2021 | disusun konsultan HKI, genre hukum |
 | **D. Tidak dipakai** | Paper final, Alat Ukur Smes | 2011, 2008 | 7 penulis; sebagian besar kutipan web |
 
-**Tindakan yang tertunda:** pastikan tahun terbit Paper SNIV. Bila 2023 ke atas, turunkan
+**Tindakan yang tertunda:** pastikan tahun terbit Paper SNIV. Jika 2023 ke atas, turunkan
 ke tingkat D dan hitung ulang seluruh sasaran akademik di bagian 1 tanpa dokumen itu.
 
 ### 0.1 Kontrol negatif yang memvalidasi metrik
@@ -48,7 +48,7 @@ lingkungan riset, dan nama penulis beririsan. Bedanya hanya siapa yang memegang 
 | *dimana* | 0 | 3 |
 
 Pemisahan ini terjadi pada tahun, topik, dan institusi yang sama. Artinya metrik di
-bagian 1 memang mengukur penulis, bukan bidang atau genre. Simpan tabel ini: bila di
+bagian 1 memang mengukur penulis, bukan bidang atau genre. Simpan tabel ini: jika di
 kemudian hari penyuntingan menghasilkan angka yang mendekati kolom kanan, presetnya gagal.
 
 ### 0.2 Garis dasar detektor
@@ -171,7 +171,7 @@ Rasio konsisten di seluruh korpus. Paper SNIV: *adalah* 28 kali, *merupakan* 2 k
 Baterai Nuklir Beta: 11 berbanding 3. Paper Pengabdian: 7 berbanding 1.
 
 Saat menyunting keluaran AI, ganti *merupakan* jadi *adalah*, atau bongkar jadi kalimat
-berverba penuh. Sisakan *merupakan* hanya bila kalimatnya benar-benar definisi dan
+berverba penuh. Sisakan *merupakan* hanya jika kalimatnya benar-benar definisi dan
 *adalah* sudah dipakai di kalimat sebelahnya.
 
 ### 2.4 Glosarium dalam kurung untuk istilah asing **[K][S]**
@@ -236,9 +236,9 @@ hanya muncul di bagian Ucapan Terima Kasih.
 kurang tepat untuk tulisan akademik karena mengurangi kesan objektif dan netral, dan banyak
 pedoman institusi meminta kata ganti lain. Penggantinya, urut dari yang paling diutamakan:
 
-1. Kalimat pasif bila pelakunya tidak penting: "Saya mengolah data dengan ..." menjadi "Data
+1. Kalimat pasif jika pelakunya tidak penting: "Saya mengolah data dengan ..." menjadi "Data
    diolah dengan ...".
-2. *penulis* atau *peneliti* bila pelakunya perlu disebut: "Penulis membahas ...",
+2. *penulis* atau *peneliti* jika pelakunya perlu disebut: "Penulis membahas ...",
    "Peneliti menggunakan metode kualitatif ...".
 3. *kami* untuk tim peneliti pada paper berpenulis banyak, sesuai kebiasaan korpus di atas.
 
@@ -372,7 +372,7 @@ pendek. Kalimat pendek lepas ditandai AI pada teks model, tetapi tidak pada tuli
 penulis. Penyebabnya kemungkinan ada pada gerombolan pola lain di teks model, bukan pada
 kalimat pendeknya sendiri.
 
-### 2.16 Klaim dibuat tepat dan berpihak bila faktanya demikian **[S]**
+### 2.16 Klaim dibuat tepat dan berpihak jika faktanya demikian **[S]**
 
 Suntingan penulis berulang kali mempersempit atau mempertegas klaim:
 
@@ -404,8 +404,8 @@ diganti kata teknis yang literal:
 | bekerja paling baik pada rentang suhu | bekerja optimum pada rentang suhu |
 | motor sinkron magnet permanen | motor sinkron bermagnet permanen |
 
-Setiap kata di kolom kiri terdengar wajar bila dibaca sendiri, sehingga lolos dari audit
-Langkah 5b. Polanya baru terlihat bila dikumpulkan. Penulis juga menambahkan glosarium
+Setiap kata di kolom kiri terdengar wajar jika dibaca sendiri, sehingga lolos dari audit
+Langkah 5b. Polanya baru terlihat jika dikumpulkan. Penulis juga menambahkan glosarium
 yang dilewatkan model, yaitu *(internal combustion engine)* dan *(DC)*, menambahkan *dapat*
 pada klaim kemampuan, menambahkan *Saat ini* dan *terutama di Indonesia* sebagai penanda
 waktu dan cakupan, dan membuang kontras ", bukan pendinginan udara" di ujung kalimat.
@@ -438,7 +438,7 @@ kemunculannya berarti sisipan model.
 | *Sedangkan* di awal kalimat | gabungkan ke kalimat sebelumnya, atau *Sebaliknya* |
 | Dokumen sebagai pelaku (*Tulisan ini membahas*) | akademik: *Pada tulisan ini dibahas* atau *Penulis membahas*; ajar: *Pada tulisan ini kita akan membahas* |
 | Kiasan halus (*paling kokoh*, *menyempit*, *terjawab*, *dipinjam*) | kata teknis yang literal (2.17) |
-| Kontras *bukan X* di ujung kalimat | hapus, atau jadikan kalimat tersendiri bila memang penting |
+| Kontras *bukan X* di ujung kalimat | hapus, atau jadikan kalimat tersendiri jika memang penting |
 | Penyangkalan antisipatif (*X, bukan berarti Y*; *bukan sekadar X, melainkan Y*) | nyatakan isinya secara positif |
 | *mengupas* pada register akademik | *membahas* atau *menguraikan* |
 | Kata santai pada penghubung (*kayak*, *sama*, *jadi*) dalam teks santai | *seperti*, *dan*, *sehingga* |

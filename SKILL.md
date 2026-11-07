@@ -75,7 +75,8 @@ A7, B4, B5, D9 sampai D12, dan F8 sampai F10 katalog. `scripts/metrik.py` (tetap
 menghitung sembilan di antaranya sebagai diagnostik tanpa ambang. Pada hari yang sama,
 atas keputusan penulis, *saya* tidak lagi dipakai pada register akademik dan ajar (bagian
 Kaidah yang sering terlewat dan bagian 2.8 `voice-prib-id.md`), dan skrip ikut
-menghitungnya pada kedua preset itu.
+menghitungnya pada kedua preset itu. Masih pada hari yang sama, konjungsi syarat pada kedua
+register itu ditetapkan *jika* menggantikan *bila*, termasuk di prosa skill ini sendiri.
 
 Skill ini menyunting teks berbahasa Indonesia agar terbaca sebagai tulisan manusia,
 bukan keluaran model. Kerangka kerjanya diwarisi dari skill `humanizer`, yaitu putaran
@@ -87,14 +88,14 @@ dalam bahasa Indonesia sama sekali berbeda dari tell dalam bahasa Inggris.
 Batas 200 karakter pada kolom description membuat daftar pemicu tidak muat di sana.
 Rinciannya di sini.
 
-**Pakai skill ini bila user meminta salah satu dari berikut, dalam bahasa Indonesia:**
+**Pakai skill ini jika user meminta salah satu dari berikut, dalam bahasa Indonesia:**
 
 `/humanizer-id`, `/humanizer-id-cek`, humanize teks ini, rapikan bahasanya, biar tidak
 kaku, buat lebih mengalir, terlalu terasa seperti AI, kurangi kesan AI, sesuaikan dengan
 gaya tulisan saya, cek gaya tulisan, abstrak ini kaku, perbaiki bahasa paper, haluskan
 kalimatnya, benerin tulisan ini, kalimatnya masih terasa terjemahan, diksinya kurang pas.
 
-**Pakai juga bila user membawa berkas yang sudah disunting model lain**, misalnya
+**Pakai juga jika user membawa berkas yang sudah disunting model lain**, misalnya
 "perbaikan bahasa sudah saya lakukan dengan Gemini, coba periksa", "cek apakah sudah
 sesuai humanizer", atau "audit hasil suntingan ini". Alur kerjanya berbeda, dan
 langkahnya ada di bagian **Menerima berkas yang sudah disunting model lain**.
@@ -102,7 +103,7 @@ langkahnya ada di bagian **Menerima berkas yang sudah disunting model lain**.
 Berlaku untuk paper, abstrak, prosiding, proposal, buku ajar, modul, diktat, laporan,
 dan surel berbahasa Indonesia.
 
-**Jangan pakai skill ini bila:**
+**Jangan pakai skill ini jika:**
 
 - Teksnya berbahasa Inggris. Arahkan ke skill `humanizer` biasa, yang katalognya memang
   berbasis pola bahasa Inggris.
@@ -137,7 +138,7 @@ menunjukkan di mana teks masih menyimpang. Langkah terakhir, membaca dan menyunt
 dengan tangan, tetap milik penulis, dan tidak ada versi skill ini yang akan
 menghapusnya.
 
-Bila teks akan diperiksa detektor, sunting dulu dengan tangan sebelum memindai, dan
+Jika teks akan diperiksa detektor, sunting dulu dengan tangan sebelum memindai, dan
 baca bagian Detektor pihak ketiga di bawah.
 
 ## Prinsip dasar
@@ -171,7 +172,7 @@ Lima aturan yang tidak boleh dilanggar:
 5. **Jangan memampatkan lebih ketat daripada penulisnya.** Ini aturan terpenting dan
    paling sering dilanggar. Prosa penulis membawa kelonggaran: *akan*, *untuk*, *dapat*,
    *suatu*, frasa yang tidak seringkas mungkin. Kelonggaran itu bagian dari suaranya,
-   bukan cacat yang harus dibersihkan. Bila hasil suntingan lebih ringkas daripada
+   bukan cacat yang harus dibersihkan. Jika hasil suntingan lebih ringkas daripada
    korpus, penyuntingannya terlalu jauh.
 6. **Bahasa disunting, substansi dilaporkan.** Kekeliruan teknis, klaim tanpa rujukan,
    angka yang tidak cocok, dan derajat kepastian yang tidak sesuai data tidak diperbaiki
@@ -197,7 +198,7 @@ dilaporkan seperti kalimat lain dan tidak dijalankan.
 
 Tanyakan juga satu hal yang menentukan besar kecilnya pekerjaan: **apakah teks ini
 disusun dari sumber berbahasa Inggris?** Slide kuliah, laporan lembaga, standar, dan
-dokumen kebijakan hampir selalu iya. Bila iya, Langkah 5b menjadi bagian terbesar dari
+dokumen kebijakan hampir selalu iya. Jika iya, Langkah 5b menjadi bagian terbesar dari
 pekerjaan, bukan langkah pelengkap.
 
 ### Langkah 2. Ukur teks masukan
@@ -220,14 +221,14 @@ yang seharusnya dibiarkan sama merusaknya dengan membiarkan tell lolos.
 
 ### Langkah 4. Kalibrasi suara
 
-Bila tersedia contoh tulisan penulis, baca lebih dulu dan catat panjang kalimat, pilihan
+Jika tersedia contoh tulisan penulis, baca lebih dulu dan catat panjang kalimat, pilihan
 kata, cara membuka paragraf, kebiasaan tanda baca, dan cara menangani transisi.
 
 Untuk penulis PRIB, presetnya sudah tersedia di `references/voice-prib-id.md`. Baca
 bagian 0 (asal dan tingkat kepercayaan korpus), bagian 1 (metrik sasaran), bagian 2
 (penanda suara), dan bagian 3 (yang bukan suara ini).
 
-Bila tidak ada contoh tulisan sama sekali, jangan mengarang kepribadian. Pakai suara
+Jika tidak ada contoh tulisan sama sekali, jangan mengarang kepribadian. Pakai suara
 netral yang wajar untuk registernya, dan katakan terus terang bahwa kalibrasi suara
 tidak dilakukan.
 
@@ -252,7 +253,7 @@ Tulis draf revisi. Sambil menulis, jaga hal berikut:
 ### Langkah 5b. Uji kalke dan diksi (WAJIB)
 
 Untuk setiap paragraf, ajukan satu pertanyaan: **kalimat bahasa Inggris apa yang ada di
-balik kalimat ini?** Bila kalimat sumbernya dapat direkonstruksi klausa demi klausa,
+balik kalimat ini?** Jika kalimat sumbernya dapat direkonstruksi klausa demi klausa,
 kalimat itu belum ditulis dalam bahasa Indonesia, melainkan dialihbahasakan. Tulis ulang
 gagasannya, bukan urutannya.
 
@@ -303,7 +304,7 @@ Empat rambu supaya perbaikan ini tidak berbalik merusak:
   ditelusuri, dan tidak menjamin isi catatannya benar. Pada teks teknis, ketepatan
   mengalahkan kelancaran.
 
-Bila satu istilah dipakai berulang kali, putuskan istilahnya **sekali di depan** bersama
+Jika satu istilah dipakai berulang kali, putuskan istilahnya **sekali di depan** bersama
 penulis, lalu terapkan ke seluruh dokumen dan dokumen bersaudaranya. Menggantinya satu
 per satu sambil menyunting akan meninggalkan campuran istilah yang lebih kacau daripada
 keadaan awal.
@@ -353,7 +354,7 @@ Rambunya sama seperti Langkah 5b, yaitu **jangan menukar frasa kolokial dengan r
 birokratis.** "Beban kerugian berupa waktu kerja personil" tidak lebih baik daripada
 "biaya satu jam kerja teknisi". Yang dibuang nada santainya, bukan bendanya.
 
-Tabel ini berlaku untuk register `akademik` dan `ajar`. Bila penulis memang meminta
+Tabel ini berlaku untuk register `akademik` dan `ajar`. Jika penulis memang meminta
 tulisan santai, misalnya komentar media sosial atau penjelasan populer, ikuti bagian 2.13
 `voice-prib-id.md`: kata penghubung dan perbandingan tetap baku (*seperti*, *dan*,
 *sehingga*, *kemudian*), sedangkan unsur santai hanya muncul pada verba dan keterangan
@@ -388,7 +389,7 @@ kontras. Penulis menilai pola ini sebagai AI slop yang paling mudah dikenali. Be
 `Ini bukan berarti ...` `Hal ini bukan berarti ...` `X, bukan berarti Y.`
 `bukan sekadar X, melainkan Y` `bukan X, melainkan Y` di ujung kalimat atau paragraf
 
-Tindakannya adalah menghapus penyangkalan itu dan menyatakan isinya secara positif. Bila
+Tindakannya adalah menghapus penyangkalan itu dan menyatakan isinya secara positif. Jika
 salah paham yang hendak dicegah memang nyata, tulis fakta yang benar sebagai kalimat biasa,
 sebaiknya dengan angka atau rujukan.
 
@@ -422,7 +423,7 @@ sudah membawa angka, nama, atau tanggal.
 > **Sesudah:** Kemudian infrastrukturnya pun masih terbatas, karena sepanjang yang saya
 > temukan stasiun pengisian hidrogen di Indonesia baru tiga ...
 
-Untuk mengujinya, hapus kalimat itu lalu periksa apakah ada informasi yang hilang. Bila
+Untuk mengujinya, hapus kalimat itu lalu periksa apakah ada informasi yang hilang. Jika
 tidak ada, satukan dengan kalimat sesudahnya. Sasarannya nol atau satu per dokumen.
 
 ### Langkah 5d. Fusi kalimat terfragmentasi
@@ -484,12 +485,12 @@ sudah berada di pita penulis.
 Perbaiki temuan audit. Untuk simpangan baku yang masih di bawah 7, periksa dulu arah
 kekurangannya sebelum bertindak, karena dua penyebabnya menuntut perlakuan berlawanan.
 
-Bila kalimat pendek sudah 20 persen ke atas tetapi kalimat terpanjang di bawah 30 kata,
+Jika kalimat pendek sudah 20 persen ke atas tetapi kalimat terpanjang di bawah 30 kata,
 yang kurang adalah kalimat panjang. Panjangkan dua atau tiga kalimat penjelas lewat
 klausa relatif, aposisi, atau keterangan sisipan. **Jangan memanjangkan dengan rangkaian
 koma dan kata dan**, karena itu cara termalas dan langsung menaikkan baris koordinasi.
 
-Bila kalimat pendek kurang dari 15 persen, tambahkan kalimat pendek penutup paragraf.
+Jika kalimat pendek kurang dari 15 persen, tambahkan kalimat pendek penutup paragraf.
 
 **Isi kalimat pendek penutup harus fakta, temuan, atau pengakuan batas, bukan
 punchline.** Aforisme ("Di situlah debat yang sebenarnya"), paralelisme retoris
@@ -507,7 +508,7 @@ dijadikan alasan untuk mencopotnya. Pada esai LFR versi penulis, baris itu tetap
 Jangan memangkas kalimat panjang secara menyeluruh. Memecah semuanya justru menurunkan
 simpangan baku, bukan menaikkannya.
 
-Terakhir, periksa baris kepadatan kata pemadat di keluaran skrip. Bila di bawah 73 per
+Terakhir, periksa baris kepadatan kata pemadat di keluaran skrip. Jika di bawah 73 per
 1.000 kata, prosanya lebih mampat daripada tulisan penulis. Longgarkan dengan
 mengembalikan frasa yang wajar, misalnya *penting untuk disampaikan* alih-alih *penting
 disebut*, atau *Upaya untuk menaikkan* alih-alih *Upaya menaikkan*. Jangan menambah kata
@@ -519,7 +520,7 @@ CARA MENAIKKAN KEPADATAN PEMADAT yang terbukti, urut dari yang paling banyak has
 2. Kembalikan *akan* pada kalimat penjelas. "Anda melihat rangka yang sama" menjadi
    "Anda akan melihat rangka yang sama".
 3. Kembalikan sapaan pada kalimat ajakan dan peringatan, yaitu *Anda* dan *kita*.
-4. Ganti *menggunakan* menjadi *memakai*, lalu tambahkan *untuk* bila kalimatnya menuntut.
+4. Ganti *menggunakan* menjadi *memakai*, lalu tambahkan *untuk* jika kalimatnya menuntut.
 5. Ganti *sebuah* menjadi *suatu* pada nomina abstrak.
 
 Sekitar 60 suntingan semacam itu menaikkan kepadatan 16 poin pada bab sepanjang 8.000
@@ -537,7 +538,7 @@ Sampaikan lima hal:
 5. Tabel perbandingan metrik sebelum dan sesudah
 6. **Poin konfirmasi**, yaitu temuan substansi menurut aturan keenam: klaim yang perlu
    rujukan, angka yang perlu dicek, tabel atau gambar yang belum bernomor, dan derajat
-   kepastian yang mungkin tidak sesuai data. Bila tidak ada, tulis bahwa tidak ada.
+   kepastian yang mungkin tidak sesuai data. Jika tidak ada, tulis bahwa tidak ada.
 
 Butir 3 tidak boleh dilewati. Keputusan istilah adalah wewenang penulis, bukan wewenang
 penyunting, dan penulis perlu melihatnya sebagai daftar, bukan menemukannya satu per satu
@@ -631,7 +632,7 @@ terpisah. Bentuk "konvensi di mana baris menyatakan kelas aktual" diganti "konve
 menempatkan kelas aktual pada baris". Cari `\bdi mana\b` lalu pastikan hasilnya nol pada
 teks teknis. Bentuk `dimana` dan `yang mana` sebagai penghubung juga dilarang.
 
-**Kata "oleh" setelah verba pasif berimbuhan di-.** Bila pelakunya disebut, pakai *oleh*:
+**Kata "oleh" setelah verba pasif berimbuhan di-.** Jika pelakunya disebut, pakai *oleh*:
 dirumuskan oleh Komisi Eropa, dijanjikan oleh Industri 5.0, dilakukan oleh pemiliknya.
 Menurut Tata Bahasa Baku Bahasa Indonesia, *oleh* membuat hubungan fungsi antarunsur
 kalimat lebih tegas dan bernada formal. Pasif tanpa pelaku tetap apa adanya.
@@ -648,13 +649,19 @@ itu *tolok ukur* bukan *tolak ukur*.
 **Kata ganti orang pertama pada register akademik dan ajar.** *saya* tidak dipakai,
 walaupun tidak dilarang secara mutlak oleh kaidah, karena tulisan akademik bertumpu pada
 data dan argumen, dan banyak pedoman institusi meminta kata ganti lain. Gantinya, urut dari
-yang paling diutamakan: kalimat pasif bila pelakunya tidak penting ("Data diolah dengan
-..."), *penulis* atau *peneliti* bila pelakunya perlu disebut ("Penulis membahas ..."), dan
+yang paling diutamakan: kalimat pasif jika pelakunya tidak penting ("Data diolah dengan
+..."), *penulis* atau *peneliti* jika pelakunya perlu disebut ("Penulis membahas ..."), dan
 *kami* untuk tim peneliti pada paper berpenulis banyak. *kita* inklusif tetap boleh untuk
 penalaran bersama pembaca, terutama pada register `ajar`. Kutipan langsung yang memuat
 *saya* tidak disunting. Pada register `semiformal` yang dituturkan penulis sendiri, seperti
 komentar media sosial atau opini informal, *saya* tetap sah. Rinciannya di bagian 2.8
 `voice-prib-id.md`.
+
+**Konjungsi syarat ditulis *jika*.** Pada register `akademik` dan `ajar`, padanan *if*
+adalah *jika*, atau *apabila* jika ingin variasi yang sama formalnya. *bila* memang tercatat
+di KBBI sebagai konjungsi, tetapi juga sebagai kata tanya *kapan*, dan pemakaian formalnya
+kalah lazim, sehingga penulis memilih *jika*. Pada register `semiformal`, *bila* tetap boleh.
+Kutipan langsung tidak disunting.
 
 **Peluluhan KTSP.** Fonem awal *k*, *t*, *s*, dan *p* luluh setelah *me-* dan *pe-*,
 termasuk pada kata serapan: *memengaruhi* (bukan *mempengaruhi*), *menyintesis*,
@@ -662,7 +669,7 @@ termasuk pada kata serapan: *memengaruhi* (bukan *mempengaruhi*), *menyintesis*,
 *mengubah*. Gugus konsonan tidak luluh: *menstabilkan*, *mentransmisikan*, *mempraktikkan*.
 
 **Bentuk terikat ditulis serangkai.** *pascabencana*, *antarmodul*, *multidisiplin*,
-*nonlogam*, *subbab*, *praproses*. Bila diikuti huruf kapital atau angka, pakai tanda
+*nonlogam*, *subbab*, *praproses*. Jika diikuti huruf kapital atau angka, pakai tanda
 hubung: *pasca-Perang Dunia*, *non-ASN*. *antar jemput* tetap terpisah karena *antar* di
 situ verba.
 
@@ -682,7 +689,7 @@ bersubjek. Pilih "Penelitian ini menunjukkan ..." atau pasif "Dalam penelitian i
 ditunjukkan ...". Lihat bagian A6 katalog.
 
 **Rujuk tabel dan gambar dengan nomornya.** "tabel di bawah ini" dan
-"grafik di atas" diganti "Tabel 4.2" atau "(Gambar 3.1)". Bila nomornya belum ada,
+"grafik di atas" diganti "Tabel 4.2" atau "(Gambar 3.1)". Jika nomornya belum ada,
 jangan dikarang. Masukkan ke poin konfirmasi (bagian D10 katalog).
 
 **Tipografi istilah teknis.** Kode, perintah terminal, nama berkas, nama fungsi, dan kunci
@@ -708,7 +715,7 @@ keadaan terkini diberi penanda waktu, misalnya *Saat ini*.
 | Berkas | Isi | Kapan dibaca |
 |---|---|---|
 | `references/id-ai-tells.md` | Katalog tell bahasa Indonesia, positif palsu, register yang dikecualikan | Selalu |
-| `references/voice-prib-id.md` | Preset suara PRIB, metrik sasaran, asal korpus | Bila penulisnya PRIB |
+| `references/voice-prib-id.md` | Preset suara PRIB, metrik sasaran, asal korpus | Jika penulisnya PRIB |
 | `scripts/metrik.py` | Pengukur tujuh metrik berambang plus diagnostik (versi 1.4: triplet, deret sejajar, kalimat pendek lepas, dan sejak 7 November 2026 sembilan diagnostik kaidah dan wacana) | Langkah 2 dan 6 |
 
 Tidak ada berkas rujukan untuk Langkah 5b sampai 5d. Kalke, personifikasi, dan
@@ -719,7 +726,7 @@ lalu membaca ulang seluruh bab sambil memperhatikan bagaimana tiap subbab dibuka
 
 ## Detektor pihak ketiga
 
-**Aturan utama: suara penulis menang, skor detektor kalah.** Bila keduanya bentrok,
+**Aturan utama: suara penulis menang, skor detektor kalah.** Jika keduanya bentrok,
 pilih suara penulis, laporkan skornya apa adanya, dan jangan menyunting demi angka.
 Ini keputusan penulis, bukan asumsi.
 
@@ -887,7 +894,7 @@ Gemini 3.6, dan Grok 4.5.
 
 Karena itu, **setiap ambang yang dikalibrasi terhadap detektor punya masa pakai
 hitungan minggu.** Ambang di skill ini dikalibrasi terhadap korpus tulisan penulis, yang
-tidak berubah ketika detektor dimutakhirkan. Pertahankan begitu. Bila mencatat skor,
+tidak berubah ketika detektor dimutakhirkan. Pertahankan begitu. Jika mencatat skor,
 tulis versi modelnya, tanggalnya, dan panjang teksnya sekaligus.
 
 **Jangan mengarang salah ketik atau cacat.** Korpus penulis memuat banyak salah ketik,
@@ -904,7 +911,7 @@ penilaian, tidak ada pengakuan ketidakpastian, tidak ada sudut pandang orang per
 ketika seharusnya ada (hanya pada register semiformal, lihat aturan kata ganti orang pertama
 di bagian Kaidah yang sering terlewat), dan terbaca seperti siaran pers.
 
-Namun **terapkan bagian ini hanya bila isi dan suara penulis memang menuntutnya.** Untuk
+Namun **terapkan bagian ini hanya jika isi dan suara penulis memang menuntutnya.** Untuk
 teks teknis, ensiklopedis, hukum, atau rujukan, netral dan datar justru *adalah* suara
 manusia yang benar. Jangan menyuntikkan opini atau orang pertama ke sana.
 
@@ -945,7 +952,7 @@ Cari **gerombolan** tell, bukan tell tunggal. Satu `namun` tidak berarti apa-apa
 
 ## Tanda tulisan manusia yang harus dipertahankan
 
-Bila menemui hal berikut, condonglah membiarkan prosanya:
+Jika menemui hal berikut, condonglah membiarkan prosanya:
 
 - Detail spesifik yang sulit dikarang: angka tak bulat, nama alat, nomor kontrak,
   tanggal persis.
@@ -1048,7 +1055,7 @@ Langkah 5b tidak boleh dilewati.
 > Pada ambang 0,70, model bekerja sangat konservatif karena dari 23 peringatan yang
 > dikeluarkan, semuanya adalah kegagalan aktual sehingga presisi mencapai 1,0000.
 > Akibatnya, ada 45 kasus kegagalan yang terlewat dan *recall* hanya 0,3382. Sebaliknya,
-> bila ambang diturunkan ke 0,10, model akan bekerja jauh lebih agresif dan berhasil
+> jika ambang diturunkan ke 0,10, model akan bekerja jauh lebih agresif dan berhasil
 > menangkap 60 dari 68 kegagalan (*recall* 0,8824), tetapi juga menghasilkan 87 alarm
 > palsu. Karena itu, presisinya turun menjadi 0,4082.
 
@@ -1064,7 +1071,7 @@ Versi Sesudah ini disunting ulang pada 1.7. Versi sebelumnya diambil dari bab di
 versi Gemini dan masih memuat *merupakan*, *Namun, konsekuensinya adalah*, *namun* di
 tengah kalimat, dan pembuka kosong *Pola hubungan ... memperlihatkan dinamika kompromi
 tersebut secara konsisten*. Kalimat tentang ambang 0,10 kini dibuka dengan *Sebaliknya,
-bila ambang diturunkan* supaya tidak membentuk pasangan sejajar *Pada ambang 0,70 ...
+jika ambang diturunkan* supaya tidak membentuk pasangan sejajar *Pada ambang 0,70 ...
 Pada ambang 0,10*, karena pasangan semacam itu ditandai AI pada pengukuran 26 Oktober
 2026. Versi ini lulus seluruh baris berambang preset akademik, dengan kepadatan pemadat
 75,9 per 1.000 kata.
