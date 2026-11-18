@@ -12,10 +12,10 @@ misalnya rilis v1.6.1 yang memuat aturan versi 1.6.
 | `buat_paket.py` | Membuat ZIP datar untuk ChatGPT dan Gem, serta paket skill untuk Gemini |
 
 Video tutorial pemasangan:
-[ChatGPT melalui Project](https://youtu.be/1m0B6j2egko) dan
-[Gemini melalui Gem](https://youtu.be/5NclZSGfZfk). Video Gemini memakai Gem, yang mulai
-17 November 2026 dipindahkan bertahap menjadi skill. Langkah skill ada di bagian
-**Gemini melalui skill** di bawah.
+[ChatGPT melalui Project](https://youtu.be/1m0B6j2egko),
+[Gemini melalui skill](https://youtu.be/8lhmU4xAt1g), dan
+[Gemini melalui Gem](https://youtu.be/5NclZSGfZfk). Mulai 17 November 2026, Gem dipindahkan
+bertahap menjadi skill, sehingga video Gem hanya untuk akun yang Gem-nya belum dipindahkan.
 
 ## Membuat paket
 
