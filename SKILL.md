@@ -5,7 +5,7 @@ description: "Menyunting teks bahasa Indonesia agar tidak terbaca sebagai tulisa
 
 # Humanizer Indonesia
 
-**Versi 1.7, 26 Oktober 2026.** Untuk memastikan versi mana yang aktif, tanya saja
+**Versi 1.7.1, 18 November 2026.** Untuk memastikan versi mana yang aktif, tanya saja
 "humanizer-indonesia versi berapa" dan jawabannya diambil dari baris ini.
 
 Riwayat singkat. 1.0 rilis awal. 1.1 memperbaiki deteksi verba ringan dan menambah
@@ -77,7 +77,7 @@ atas keputusan penulis, *saya* tidak lagi dipakai pada register akademik dan aja
 Kaidah yang sering terlewat dan bagian 2.8 `voice-prib-id.md`), dan skrip ikut
 menghitungnya pada kedua preset itu. Masih pada hari yang sama, konjungsi syarat pada kedua
 register itu ditetapkan *jika* menggantikan *bila*, termasuk di prosa skill ini sendiri.
-Tambahan 18 November 2026, masih pada 1.7, lahir dari uji tiga arah pada satu teks uji
+1.7.1 (18 November 2026) lahir dari uji tiga arah pada satu teks uji
 tentang baterai nuklir: teks mentah buatan model (AI 72 persen), suntingan skill di Gemini
 (AI 88 persen, nol AI pattern), dan suntingan skill di Claude (AI 29 persen, human 35).
 Dari rincian per kalimatnya, Langkah 5 kini menegaskan bahwa penghubung antarkalimat yang
