@@ -192,6 +192,21 @@ diselamatkan sendiri. Berkas Knowledge humanizer-indonesia semuanya ada di paket
 jadi tidak ada yang perlu diselamatkan. Ganti saja isi skill hasil pemindahan dengan
 paket skill Gemini lewat **Replace skill**.
 
+## Memakai preset suara sendiri
+
+`voice-prib-id.md` adalah preset suara penulis repo ini. Untuk memakai suara Anda sendiri,
+susun berkas `voice-namaanda-id.md` dari kerangka `references/voice-template-id.md`
+dengan prompt di README utama, bagian **Memakai preset suara sendiri**. Setelah itu:
+
+- **Project ChatGPT, Custom GPT, atau Gem:** unggah berkas preset Anda bersama berkas lain.
+  `voice-prib-id.md` boleh tidak diunggah.
+- **Skill Gemini:** tambahkan berkas preset ke dalam ZIP paket skill sebelum diunggah, atau
+  lewat **Add files** pada formulir manual.
+
+Instruksi portabel mengenali berkas apa pun bernama `voice-*.md`, jadi isi `INSTRUKSI.md`
+tidak perlu diubah. Tanpa preset, Anda tetap dapat melampirkan contoh tulisan sendiri di
+percakapan.
+
 ## Bila berkas ditolak saat diunggah
 
 Pemilih berkas di peramban HP kadang menolak ekstensi `.md` atau `.py`. Tambahkan

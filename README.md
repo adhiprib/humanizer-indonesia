@@ -5,7 +5,7 @@ seperti keluaran model atau terjemahan, dan kembali ke gaya penulisnya. Skill in
 bisa dipakai untuk mengaudit berkas yang sudah disunting model lain, misalnya hasil
 suntingan Gemini atau ChatGPT.
 
-Versi saat ini: **1.7.1** (18 November 2026). Riwayat perubahan ada di bagian atas
+Versi saat ini: **1.7.2** (18 November 2026). Riwayat perubahan ada di bagian atas
 [`SKILL.md`](SKILL.md).
 
 ## Penting: ini bukan alat untuk lolos detektor AI
@@ -34,9 +34,11 @@ korpus tulisannya sendiri tahun 2008 sampai 2025. Ambang pada `scripts/metrik.py
 dikalibrasi terhadap korpus yang sama.
 
 Berkas ini disertakan sebagai contoh lengkap seperti apa preset suara yang baik. **Anda
-bebas menggantinya sesuai kebutuhan**, dan sebaiknya memang diganti bila Anda ingin
-hasil suntingan mengikuti gaya Anda sendiri. Lihat bagian
-[Mengganti preset suara](#mengganti-preset-suara).
+bebas memakai preset sendiri**, dan sebaiknya memang begitu jika Anda ingin hasil
+suntingan mengikuti gaya Anda. Skill mengenali berkas preset apa pun bernama
+`references/voice-*.md`, dan kerangka kosongnya tersedia di
+[`references/voice-template-id.md`](references/voice-template-id.md). Lihat bagian
+[Memakai preset suara sendiri](#memakai-preset-suara-sendiri).
 
 Bila tidak ada preset yang cocok, skill ini akan memakai suara netral yang wajar untuk
 registernya dan menyatakan terus terang bahwa kalibrasi suara tidak dilakukan.
@@ -48,6 +50,7 @@ registernya dan menyatakan terus terang bahwa kalibrasi suara tidak dilakukan.
 | `SKILL.md` | Instruksi utama skill: alur kerja delapan langkah, kaidah, contoh |
 | `references/id-ai-tells.md` | Katalog pola khas tulisan AI dalam bahasa Indonesia, positif palsu, dan register yang dikecualikan |
 | `references/voice-prib-id.md` | Preset suara penulis (contoh, silakan diganti) |
+| `references/voice-template-id.md` | Kerangka kosong untuk menyusun preset suara sendiri |
 | `scripts/metrik.py` | Pengukur metrik gaya teks Indonesia, tanpa dependensi di luar pustaka standar Python |
 | `portable/` | Versi portabel untuk ChatGPT dan Gemini: instruksi ringkas, panduan pemasangan, skrip paket |
 
@@ -133,21 +136,54 @@ cat teks.txt | python3 scripts/metrik.py -
 
 Preset yang tersedia: `akademik`, `ajar`, `semiformal`.
 
-## Mengganti preset suara
+## Memakai preset suara sendiri
 
-1. Kumpulkan contoh tulisan Anda sendiri, idealnya yang ditulis **tanpa bantuan AI**.
-   Semakin banyak dan semakin beragam registernya, semakin baik.
-2. Buat berkas baru, misalnya `references/voice-namaanda-id.md`, dengan mengikuti
-   struktur `voice-prib-id.md`: asal dan tingkat kepercayaan korpus, metrik sasaran,
-   penanda suara, dan hal yang bukan suara Anda. Claude bisa membantu menyusunnya dari
-   contoh tulisan yang Anda berikan.
-3. Ubah rujukan di `SKILL.md`, yaitu pada **Langkah 4. Kalibrasi suara** dan tabel
-   **Berkas rujukan**, agar menunjuk ke berkas Anda.
-4. Bila perlu, sesuaikan ambang di `PRESET` pada `scripts/metrik.py` dengan rentang
-   metrik tulisan Anda sendiri. Jalankan skrip pada beberapa tulisan Anda untuk melihat
-   rentangnya.
+Ada tiga cara, dari yang paling ringan.
 
-Berkas `voice-prib-id.md` boleh dihapus setelah preset Anda siap.
+**1. Lampirkan contoh tulisan di percakapan.** Tanpa mengubah berkas apa pun, sertakan
+satu atau dua tulisan Anda bersama teks yang akan disunting, misalnya "sunting teks ini,
+register akademik, sesuaikan dengan gaya tulisan saya di lampiran". Skill membaca contoh
+itu pada Langkah 4. Kalibrasi ini perlu diulang di setiap percakapan.
+
+**2. Susun preset suara sendiri.** Preset menyimpan kalibrasi itu secara permanen.
+
+1. Kumpulkan beberapa tulisan Anda sendiri, idealnya yang disusun **tanpa bantuan AI**.
+   Semakin beragam registernya, semakin baik. Tulisan sebelum 2023 lebih aman sebagai
+   patokan.
+2. Beri Claude, ChatGPT, atau Gemini tulisan-tulisan itu beserta
+   [`voice-template-id.md`](references/voice-template-id.md) dan
+   [`voice-prib-id.md`](references/voice-prib-id.md), lalu pakai prompt berikut:
+
+```text
+Saya melampirkan beberapa tulisan saya sendiri yang saya susun tanpa bantuan AI,
+masing-masing dengan tahun dan registernya (akademik, ajar, atau semiformal).
+Susun preset suara saya untuk skill humanizer-indonesia dengan mengikuti kerangka
+voice-template-id.md dan contoh voice-prib-id.md. Isi setiap bagian hanya dari
+tulisan yang saya lampirkan, kutip kalimat aslinya sebagai contoh, dan jangan
+mengarang kebiasaan yang tidak ada di tulisan itu. Jika metrik.py dapat dijalankan,
+ukur setiap tulisan dengan preset yang sesuai registernya lalu isi bagian 1 dengan
+angkanya; jika tidak dapat, tulis "tidak diukur". Beri nama berkasnya
+voice-[nama saya]-id.md dan serahkan sebagai satu berkas Markdown.
+```
+
+3. Periksa hasilnya. Hapus penanda suara yang tidak Anda kenali sebagai kebiasaan sendiri,
+   dan pastikan tidak ada lagi isian bertanda kurung siku. Skill menganggap berkas yang
+   masih memuat isian seperti [NAMA] sebagai kerangka dan tidak memakainya.
+
+**3. Pasang preset di platform Anda.**
+
+| Platform | Cara memasang |
+|---|---|
+| Claude Code atau Claude (skill) | Simpan berkas di folder `references/` skill, misalnya `references/voice-namaanda-id.md`, lalu unggah ulang skill jika Anda memakai Claude. `SKILL.md` tidak perlu diubah. |
+| Project ChatGPT, Custom GPT, atau Gem | Unggah berkas preset bersama berkas lain. `voice-prib-id.md` boleh tidak diunggah. |
+| Skill Gemini | Tambahkan berkas preset ke ZIP `humanizer-indonesia-gemini-skill.zip` sebelum diunggah, atau tambahkan lewat **Add files** saat membuat skill secara manual. |
+
+Jika Anda memasang lebih dari satu preset milik sendiri, skill akan menanyakan mana yang
+dipakai. Sebut nama presetnya dalam permintaan untuk melewati pertanyaan itu.
+
+Ambang di `scripts/metrik.py` dikalibrasi terhadap tulisan penulis repo ini. Jika tulisan
+Anda sendiri berstatus PERIKSA pada beberapa baris, sesuaikan `PRESET` di skrip dengan
+rentang metrik tulisan Anda. Prinsipnya, tulisan Anda sendiri harus lulus.
 
 ## Asal-usul
 

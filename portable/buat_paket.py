@@ -63,10 +63,10 @@ GANTI_GEMINI = [
         " `metrik.py` dari repo di komputernya.",
     ),
     (
-        "`id-ai-tells.md`, `voice-prib-id.md`, dan `metrik.py` sebagai padanan jalur"
+        "`id-ai-tells.md`, berkas `voice-*.md`, dan `metrik.py` sebagai padanan jalur"
         " `references/` dan `scripts/` dalam skill.",
-        "`id-ai-tells.md` dan `voice-prib-id.md` sebagai padanan jalur `references/` dalam"
-        " skill.",
+        "`id-ai-tells.md` dan berkas `voice-*.md` sebagai padanan jalur `references/`"
+        " dalam skill.",
     ),
 ]
 NAMA_SKILL_GEMINI = "humanizer-indonesia"

@@ -5,7 +5,7 @@ description: "Menyunting teks bahasa Indonesia agar tidak terbaca sebagai tulisa
 
 # Humanizer Indonesia
 
-**Versi 1.7.1, 18 November 2026.** Untuk memastikan versi mana yang aktif, tanya saja
+**Versi 1.7.2, 18 November 2026.** Untuk memastikan versi mana yang aktif, tanya saja
 "humanizer-indonesia versi berapa" dan jawabannya diambil dari baris ini.
 
 Riwayat singkat. 1.0 rilis awal. 1.1 memperbaiki deteksi verba ringan dan menambah
@@ -85,7 +85,11 @@ menyebut hubungan logis tidak dibuang dan bahwa subjek kalimat tidak berupa nomi
 abstrak, Langkah 5c menambah butir 6 tentang paragraf fakta berderet dan penjelasan
 mekanisme berurutan baku, Langkah 7 mewajibkan kalimat penutup membawa informasi baru, dan
 Langkah 8 dibetulkan menjadi enam hal. Bagian Detektor pihak ketiga kini memuat tujuh
-belas pengukuran.
+belas pengukuran. 1.7.2 (18 November 2026) membuka preset suara untuk pengguna lain:
+Langkah 4 kini mengenali berkas preset apa pun bernama `references/voice-*.md`,
+`references/voice-template-id.md` ditambahkan sebagai kerangka kosong, dan README memuat
+prompt siap pakai untuk menyusun preset dari tulisan sendiri. Aturan penyuntingan tidak
+berubah.
 
 Skill ini menyunting teks berbahasa Indonesia agar terbaca sebagai tulisan manusia,
 bukan keluaran model. Kerangka kerjanya diwarisi dari skill `humanizer`, yaitu putaran
@@ -233,9 +237,22 @@ yang seharusnya dibiarkan sama merusaknya dengan membiarkan tell lolos.
 Jika tersedia contoh tulisan penulis, baca lebih dulu dan catat panjang kalimat, pilihan
 kata, cara membuka paragraf, kebiasaan tanda baca, dan cara menangani transisi.
 
-Untuk penulis PRIB, presetnya sudah tersedia di `references/voice-prib-id.md`. Baca
-bagian 0 (asal dan tingkat kepercayaan korpus), bagian 1 (metrik sasaran), bagian 2
-(penanda suara), dan bagian 3 (yang bukan suara ini).
+Preset suara disimpan sebagai berkas `references/voice-*.md`. Pilih preset dengan urutan
+berikut:
+
+1. Preset yang diminta pengguna dengan menyebut nama atau berkasnya.
+2. Preset milik pengguna sendiri, yaitu berkas `voice-*.md` selain `voice-prib-id.md` dan
+   `voice-template-id.md`. Jika ada lebih dari satu, tanyakan mana yang dipakai.
+3. `voice-prib-id.md`, hanya jika pengguna adalah penulis PRIB atau memintanya.
+
+`voice-prib-id.md` adalah preset penulis repo ini dan contoh preset yang lengkap.
+`voice-template-id.md` hanya kerangka kosong; jangan memakainya untuk menyunting, begitu
+pula preset lain yang masih memuat isian bertanda kurung siku seperti [NAMA]. Dari preset
+yang dipilih, baca bagian 0 (asal dan tingkat kepercayaan korpus), bagian 1 (metrik
+sasaran), bagian 2 (penanda suara), dan bagian 3 (yang bukan suara ini).
+
+Contoh tulisan yang dilampirkan di percakapan didahulukan daripada preset jika keduanya
+bertentangan, karena contoh itu lebih baru. Sebutkan pertentangannya dalam temuan audit.
 
 Jika tidak ada contoh tulisan sama sekali, jangan mengarang kepribadian. Pakai suara
 netral yang wajar untuk registernya, dan katakan terus terang bahwa kalibrasi suara
@@ -760,7 +777,9 @@ keadaan terkini diberi penanda waktu, misalnya *Saat ini*.
 | Berkas | Isi | Kapan dibaca |
 |---|---|---|
 | `references/id-ai-tells.md` | Katalog tell bahasa Indonesia, positif palsu, register yang dikecualikan | Selalu |
-| `references/voice-prib-id.md` | Preset suara PRIB, metrik sasaran, asal korpus | Jika penulisnya PRIB |
+| `references/voice-*.md` | Preset suara pengguna, jika ada | Jika pengguna memiliki preset sendiri (Langkah 4) |
+| `references/voice-prib-id.md` | Preset suara PRIB, metrik sasaran, asal korpus; juga contoh preset lengkap | Jika penulisnya PRIB |
+| `references/voice-template-id.md` | Kerangka kosong untuk menyusun preset sendiri | Tidak dibaca saat menyunting |
 | `scripts/metrik.py` | Pengukur tujuh metrik berambang plus diagnostik (versi 1.4: triplet, deret sejajar, kalimat pendek lepas, dan sejak 7 November 2026 sembilan diagnostik kaidah dan wacana) | Langkah 2 dan 6 |
 
 Tidak ada berkas rujukan untuk Langkah 5b sampai 5d. Kalke, personifikasi, dan
