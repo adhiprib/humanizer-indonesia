@@ -5,7 +5,7 @@ seperti keluaran model atau terjemahan, dan kembali ke gaya penulisnya. Skill in
 bisa dipakai untuk mengaudit berkas yang sudah disunting model lain, misalnya hasil
 suntingan Gemini atau ChatGPT.
 
-Versi saat ini: **1.7** (26 Oktober 2026, dengan tambahan sampai 7 November 2026). Riwayat perubahan ada di bagian atas
+Versi saat ini: **1.7.1** (18 November 2026). Riwayat perubahan ada di bagian atas
 [`SKILL.md`](SKILL.md).
 
 ## Penting: ini bukan alat untuk lolos detektor AI
@@ -99,17 +99,19 @@ Panduan resmi Google tentang skill Antigravity ada di
 [codelabs.developers.google.com](https://codelabs.developers.google.com/getting-started-with-antigravity-skills).
 
 **ChatGPT dan Gemini (web dan aplikasi HP).** Versi portabel dapat dipakai lewat
-Project ChatGPT, Custom GPT bila editornya tersedia di akun, atau Gem di Gemini. Skill
-mandiri di ChatGPT hanya tersedia di aplikasi desktop dan Codex, sedangkan di web dan
-HP skill perlu dikemas sebagai plugin. Panduan dan instruksi ringkasnya ada di
-[`portable/README.md`](portable/README.md). Metrik hanya dilaporkan bila benar-benar
-dihitung. Bila skrip tidak dapat dijalankan, misalnya di Gem, metrik ditulis
+Project ChatGPT, Custom GPT jika editornya tersedia di akun, atau Gem dan skill di Gemini. Sejak
+17 November 2026, Gem pada akun Google pribadi diganti skill, sedangkan akun Workspace
+menyusul pada 2027. Karena itu kedua jalur Gemini tetap tersedia, dan paketnya dibuat
+oleh `portable/buat_paket.py`. Skill mandiri di ChatGPT hanya tersedia di aplikasi
+desktop dan Codex, sedangkan di web dan HP skill perlu dikemas sebagai plugin. Panduan dan
+instruksi ringkasnya ada di [`portable/README.md`](portable/README.md). Metrik hanya
+dilaporkan jika benar-benar dihitung. Jika skrip tidak dapat dijalankan, metrik ditulis
 *tidak diukur*.
 
 Video tutorial pemasangan, dari mengunduh ZIP di halaman rilis sampai uji pertama:
 
 - [Tutorial Penggunaan Humanizer Indonesia di ChatGPT](https://youtu.be/1m0B6j2egko)
-- [Tutorial Penggunaan Humanizer Indonesia di Gemini](https://youtu.be/5NclZSGfZfk)
+- [Tutorial Penggunaan Humanizer Indonesia di Gemini](https://youtu.be/5NclZSGfZfk) (masih memakai Gem; langkah skill ada di `portable/README.md`)
 
 ## Cara memakai
 
