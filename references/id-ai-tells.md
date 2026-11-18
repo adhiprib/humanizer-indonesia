@@ -41,6 +41,15 @@ mengalami peningkatan sebesar 12%.
 
 Ambang: jika lebih dari 1 konstruksi verba ringan per 100 kata, tandai.
 
+**Nominalisasi sebagai subjek kalimat.** Kerabat pola ini adalah kalimat yang subjeknya
+nomina abstrak hasil nominalisasi: *Kapasitas daya sekecil itu belum dapat menggantikan
+...*, *Karakteristik tersebut mendukung pemakaiannya ...*, *Penerimaan masyarakat juga
+masih dipengaruhi ...*, *Keterbukaan informasi ... diperlukan ...*, *Pengembangan baterai
+nuklir memberi alternatif ...*. Kelimanya condong AI pada uji GPTZero 18 November 2026,
+sejalan dengan label *Impersonal Tone* pada esai FCEV. Ganti dengan pelaku konkret atau
+verba: *Daya sekecil itu belum cukup untuk ...*, *Publik perlu mendapat informasi ...*.
+Skrip metrik belum menghitungnya.
+
 ### A2. Pasif refleks
 
 Bahasa Indonesia ilmiah memang banyak memakai pasif, dan itu sah (lihat F1). Yang
@@ -191,6 +200,13 @@ Bahasa Indonesia yang mengalir menyambung kalimat lewat **pengulangan kata kunci
 **klitik -nya**, bukan lewat konektor. Konektor dipakai hanya ketika hubungan logisnya
 benar-benar tidak dapat ditebak dari urutan.
 
+Yang ditandai di sini adalah konektor yang ditempel di setiap kalimat atau setiap
+paragraf. Penghubung yang menyebut hubungan sebab, tambahan, atau pertentangan di depan
+kalimat pendek tidak termasuk dan jangan dibuang (Langkah 5 dan 7 SKILL.md, bagian 2.15
+`voice-prib-id.md`). Pada uji 18 November 2026, dua kalimat paling manusiawi justru
+dibuka *Karena itu* dan *Selain ...*, sedangkan suntingan yang membuang hampir semua
+penghubung terbaca lebih AI.
+
 **Sebelum:**
 > Chimney menghasilkan draft alami. Selain itu, laju alirannya bergantung pada tinggi
 > cerobong. Di sisi lain, temperatur dinding juga berpengaruh. Oleh karena itu,
@@ -231,6 +247,12 @@ Ganti dengan pernyataan spesifik yang langsung masuk ke pokok bahasan.
 
 *Dengan demikian, dapat disimpulkan bahwa*, *Sebagai penutup*, *Pada akhirnya*, ditambah
 kalimat yang mengulang judul dan menyebut sesuatu itu *sangat penting*.
+
+Kalimat penutup paragraf yang hanya mengulang isi paragraf termasuk pola ini, walaupun
+isinya faktual, misalnya *Energinya berasal dari peluruhan radioaktif berkelanjutan.*
+setelah paragraf yang sudah menjelaskan peluruhan. Kalimat itu menjadi kalimat paling AI
+pada suntingan Gemini 18 November 2026. Begitu pula paragraf kesimpulan yang merangkum
+ulang tantangan dan menambah klaim baru.
 
 ### D3. Triplet
 
@@ -282,6 +304,12 @@ memakainya, hanya lebih jarang. Patokan sementara dari tulisan itu adalah sekita
 triplet per 1.000 kata. Angka ini baru berasal dari satu teks, jadi tentatif. Yang
 ditangani adalah gerombolan triplet, seperti empat temuan dalam sekitar 200 kata pada
 potongan Bab 9, bukan satu triplet yang muncul sesekali.
+
+**Triplet di dalam kurung tetap triplet.** Memindahkan daftar ke dalam kurung, misalnya
+*(nikel-63, tritium, dan prometium-147)*, tidak menghilangkan polanya. Tangani dengan salah
+satu dari empat tindakan di atas, misalnya menyebut butir utama lebih dulu: *Sumber
+partikel betanya umumnya nikel-63, walaupun tritium dan prometium-147 juga dipakai.*
+Skrip metrik belum menghitung triplet di dalam kurung.
 
 ### D4. Enumerasi bersandar *seperti*
 
@@ -375,6 +403,18 @@ memang populer.
 misalnya rentang daya atau rentang suhu. Jika X dan Y hanya dua contoh yang tidak berada
 pada satu skala, sebut keduanya secara langsung. `scripts/metrik.py` menghitungnya sebagai
 diagnostik, dan sebagian besar temuan pada teks teknis sah.
+
+### D13. Paragraf fakta berderet dan mekanisme berurutan baku
+
+Paragraf yang mendaftar pengumuman secara kronologis (tanggal, lembaga, *mengumumkan* atau
+*memperkenalkan*, spesifikasi, lalu pengumuman berikutnya) dan paragraf yang menjelaskan
+mekanisme dalam urutan buku teks tetap ditandai AI walaupun kalimatnya sudah bersih. Pada
+uji 18 November 2026, kedua jenis paragraf itu berpeluang AI 0,87 pada ketiga versi teks
+baterai nuklir, sedangkan tujuh paragraf lain pada suntingan Claude turun ke 0,00. Ikat
+faktanya pada klaim yang sudah ada di naskah lewat *karena* atau *sehingga*, bandingkan
+angka yang sudah ada, atau buka dari akibat yang teramati. Jangan menambah fakta atau
+klaim baru. Baru satu teks, jadi ini pemeriksaan, bukan larangan. Rinciannya di butir 6
+Langkah 5c SKILL.md.
 
 ---
 

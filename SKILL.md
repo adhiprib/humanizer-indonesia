@@ -77,6 +77,15 @@ atas keputusan penulis, *saya* tidak lagi dipakai pada register akademik dan aja
 Kaidah yang sering terlewat dan bagian 2.8 `voice-prib-id.md`), dan skrip ikut
 menghitungnya pada kedua preset itu. Masih pada hari yang sama, konjungsi syarat pada kedua
 register itu ditetapkan *jika* menggantikan *bila*, termasuk di prosa skill ini sendiri.
+Tambahan 18 November 2026, masih pada 1.7, lahir dari uji tiga arah pada satu teks uji
+tentang baterai nuklir: teks mentah buatan model (AI 72 persen), suntingan skill di Gemini
+(AI 88 persen, nol AI pattern), dan suntingan skill di Claude (AI 29 persen, human 35).
+Dari rincian per kalimatnya, Langkah 5 kini menegaskan bahwa penghubung antarkalimat yang
+menyebut hubungan logis tidak dibuang dan bahwa subjek kalimat tidak berupa nominalisasi
+abstrak, Langkah 5c menambah butir 6 tentang paragraf fakta berderet dan penjelasan
+mekanisme berurutan baku, Langkah 7 mewajibkan kalimat penutup membawa informasi baru, dan
+Langkah 8 dibetulkan menjadi enam hal. Bagian Detektor pihak ketiga kini memuat tujuh
+belas pengukuran.
 
 Skill ini menyunting teks berbahasa Indonesia agar terbaca sebagai tulisan manusia,
 bukan keluaran model. Kerangka kerjanya diwarisi dari skill `humanizer`, yaitu putaran
@@ -237,7 +246,17 @@ tidak dilakukan.
 Tulis draf revisi. Sambil menulis, jaga hal berikut:
 
 - Ritme berganti-ganti. Kalimat pendek, lalu panjang, lalu sedang.
-- Kohesi lewat pengulangan kata kunci dan klitik `-nya`, bukan lewat konektor.
+- Kohesi lewat pengulangan kata kunci dan klitik `-nya`, bukan lewat konektor yang
+  ditempel di setiap kalimat. Penghubung yang menyebut hubungan logis antarkalimat
+  (*Karena itu*, *Selain itu*, *Namun*, *Akibatnya*) tetap dipakai, karena ambang konektor
+  pada skrip adalah batas atas, bukan sasaran nol. Pada uji 18 November 2026, dua kalimat
+  paling manusiawi justru dibuka penghubung, sedangkan suntingan Gemini yang menurunkan
+  konektor sampai 0,15 per 100 kata mengganti kalimat berpenghubung dengan rangkaian
+  nominalisasi yang terbaca AI.
+- Subjek kalimat tidak berupa nominalisasi abstrak, misalnya *Kapasitas daya sekecil
+  itu*, *Karakteristik tersebut*, *Penerimaan masyarakat*, *Keterbukaan informasi*, atau
+  *Pengembangan X*. Kelimanya condong AI pada uji 18 November 2026. Ganti dengan pelaku
+  konkret atau verba (bagian A1 `references/id-ai-tells.md`).
 - Informasi lama di awal kalimat, informasi baru di akhir.
 - Setiap klaim berpasangan dengan angka atau rujukan.
 - **Hitung butir setiap daftar.** Daftar tepat tiga butir adalah kebiasaan bawaan model
@@ -312,8 +331,8 @@ keadaan awal.
 ### Langkah 5c. Uji personifikasi, register, dan pembuka kalimat (WAJIB)
 
 Tiga tell pertama tidak terlihat oleh `scripts/metrik.py` sama sekali, dan ketiganya
-adalah penanda paling kentara bahwa sebuah teks teknis ditulis model. Tell keempat dihitung oleh skrip sejak versi 1.6, sedangkan tell kelima belum dapat
-dihitung.
+adalah penanda paling kentara bahwa sebuah teks teknis ditulis model. Tell keempat dihitung oleh skrip sejak versi 1.6, sedangkan tell kelima dan keenam belum
+dapat dihitung.
 
 **1. Benda mati tidak punya watak.** Model, program, persamaan, algoritma, dan data
 tidak malas, tidak berani, tidak cerewet, tidak tahu, dan tidak sakit. Ganti dengan
@@ -426,6 +445,23 @@ sudah membawa angka, nama, atau tanggal.
 Untuk mengujinya, hapus kalimat itu lalu periksa apakah ada informasi yang hilang. Jika
 tidak ada, satukan dengan kalimat sesudahnya. Sasarannya nol atau satu per dokumen.
 
+**6. Paragraf fakta berderet dan mekanisme berurutan baku.** Pada uji 18 November 2026,
+suntingan skill di Claude membuat tujuh dari sembilan paragraf teks baterai nuklir
+berpeluang AI 0,00, tetapi dua paragraf tetap 0,87. Keduanya justru paragraf yang paling
+sedikit berubah. Paragraf pertama mendaftar pengumuman produk secara kronologis (tanggal,
+lembaga, *mengumumkan* atau *memperkenalkan*, lalu spesifikasi), dan paragraf kedua
+menjelaskan mekanisme betavoltaik dalam urutan buku teks (partikel, semikonduktor,
+pasangan muatan, sambungan p-n, arus, pelindung). Kedua paragraf itu juga ditandai AI pada
+teks mentah dan pada suntingan Gemini. Paragraf RTG dan Voyager yang sama faktualnya turun
+ke 0,00 setelah faktanya dijadikan bukti klaim lewat *karena*.
+
+Tindakannya adalah mengikat fakta pada klaim yang sudah ada di naskah, tanpa menambah fakta
+baru. Jadikan fakta itu bukti dengan *karena* atau *sehingga*, bandingkan dua angka yang
+sudah ada di naskah, atau buka dari akibat yang dapat diamati lalu mundur ke penyebabnya.
+Urutan kronologis dan urutan mekanisme boleh dipertahankan jika pembaca memang
+membutuhkannya, misalnya pada bab ajar. Temuan ini baru berasal dari satu teks, jadi
+perlakukan sebagai pemeriksaan, bukan larangan (bagian D13 katalog).
+
 ### Langkah 5d. Fusi kalimat terfragmentasi
 
 Rangkaian kalimat pendek satu klausa yang berderet adalah tell yang berlawanan arah
@@ -499,6 +535,13 @@ ditaruh di ujung paragraf dibuang oleh penulis pada empat dari empat teks latiha
 24 Oktober 2026. Hal yang sama berlaku untuk kontras pendek di ujung kalimat, misalnya
 "memakai pendinginan cair ..., bukan pendinginan udara", yang juga dihapus penulis. Contoh penutup yang dipertahankan: "Efisiensinya sendiri masih rendah."
 
+**Penutup harus membawa informasi yang belum ada di paragraf.** Kalimat faktual yang hanya
+mengulang isi paragraf tetap terbaca AI. Pada uji 18 November 2026, kalimat paling AI di
+suntingan Gemini adalah tambahan *Energinya berasal dari peluruhan radioaktif
+berkelanjutan.*, yang hanya mengulang kalimat sebelumnya. Hal yang sama berlaku untuk
+paragraf kesimpulan: jangan merangkum ulang isi tulisan dan jangan menambah klaim yang
+tidak ada di naskah. Klaim semacam itu masuk poin konfirmasi.
+
 **Kalimat pendek boleh disambung kata penghubung.** Penulis menolak kalimat pendek yang
 berdiri tiba-tiba, lalu menambahkan *Kemudian*, *Selain itu*, *Namun*, atau *Karena itu*
 di depannya. Tindakan itu sah, dan baris konektor pada skrip metrik tidak boleh
@@ -528,7 +571,7 @@ kata, tanpa menambah satu kalimat baru pun.
 
 ### Langkah 8. Serahkan
 
-Sampaikan lima hal:
+Sampaikan enam hal:
 
 1. Draf revisi
 2. Daftar pendek temuan audit
@@ -558,7 +601,9 @@ memisahkan perbaikan bahasa yang memang lebih baik dari kerusakan yang terbawa s
 **Jangan pernah menerima berkas semacam itu hanya karena metriknya lulus.** Pada dua
 kasus nyata, versi model lain lulus sembilan dari sembilan baris berambang sekaligus
 menghapus satu paragraf penuh, sembilan rujukan persamaan, sembilan rujukan program,
-lima sitasi, dan belasan angka terverifikasi.
+lima sitasi, dan belasan angka terverifikasi. Pada uji 18 November 2026, suntingan Gemini
+juga menghapus seluruh AI pattern GPTZero, tetapi skor AI-nya naik dari 72 ke 88 persen,
+sehingga nol AI pattern pun bukan alasan untuk menerima berkas.
 
 ### Urutan kerja
 
@@ -730,7 +775,7 @@ lalu membaca ulang seluruh bab sambil memperhatikan bagaimana tiap subbab dibuka
 pilih suara penulis, laporkan skornya apa adanya, dan jangan menyunting demi angka.
 Ini keputusan penulis, bukan asumsi.
 
-Alasannya ada pada bukti, bukan pada prinsip saja. Empat belas pengukuran GPTZero, dicatat
+Alasannya ada pada bukti, bukan pada prinsip saja. Tujuh belas pengukuran GPTZero, dicatat
 dengan versi modelnya:
 
 | Teks | Sumbu yang disetel | Model | Skor human |
@@ -749,6 +794,9 @@ dengan versi modelnya:
 | Kontrol detektor: teks CHF 580 kata (pertama kali dipindai 14 Agustus, AI 99), dipindai ulang 26 Oktober 2026 | tidak ada, teks sama persis | 4.1m | AI 99 persen, tidak berubah |
 | Esai FCEV 1.087 kata, buatan skill 1.7, lulus 9 dari 9, tidak disunting sama sekali, 26 Oktober 2026 | genre esai kebijakan teknis, 0 AI pattern, 0 AI vocab | 4.1m | AI 25 persen, mixed 7, human 68 |
 | Opini informal PLTN 678 kata, ditulis penulis tanpa AI, 31 Oktober 2026 | (tulisan penulis) | 4.1m | AI 0 persen, mixed 2, human 98; 1 AI pattern (triplet) |
+| Teks uji baterai nuklir 665 kata, buatan Claude tanpa skill, sengaja memuat pola AI, 18 November 2026 | tanpa aturan apa pun | 4.1m | AI 72 persen, mixed 28, human 0; 6 AI pattern |
+| Teks yang sama disunting skill 1.7 di Gemini, lulus 9 dari 9 | aturan skill dijalankan Gemini | 4.1m | AI 88 persen, mixed 10, human 2; 0 AI pattern |
+| Teks yang sama disunting skill 1.7 di Claude, lulus 9 dari 9 | aturan skill dijalankan Claude | 4.1m | AI 29 persen, mixed 37, human 35; 0 AI pattern |
 
 Tujuh baris pertama berasal dari pengukuran Agustus 2026. Di sana, teks berkekhususan
 tinggi dan teks longgar setara korpus duduk di ujung berlawanan dari setiap sumbu yang
@@ -757,7 +805,8 @@ sama yang melewati suntingan tangan penulis melompat ke 45 persen. Dari situ dit
 kesimpulan bahwa detektor tidak membaca sumbu yang dapat disetel aturan gaya, melainkan
 distribusi statistik keluaran model itu sendiri. Model detektor terbaru (4.9b, rilis 12
 Agustus 2026) memang dipertajam secara eksplisit terhadap Claude 5. Enam baris berikutnya melemahkan kesimpulan itu, seperti diuraikan di
-bawah. Baris terakhir adalah garis dasar tulisan penulis pada topik PLTN.
+bawah. Baris keempat belas adalah garis dasar tulisan penulis pada topik PLTN, dan tiga baris
+terakhir adalah uji tiga arah 18 November 2026.
 
 **Catatan pengukuran kedelapan dan kesembilan (26 Oktober 2026).** Esai PLTN dipindai
 sebelum empat triplet yang ditandai GPTZero diperbaiki, dengan suntingan tangan hanya dua
@@ -865,6 +914,26 @@ keluaran model, tetapi jangan dipakai untuk menilai tulisan penulis sendiri. Pad
 preset semiformal, tulisan ini gagal di simpangan baku (5,9), konektor (0,74), dan
 *merupakan* (1,47) selain dua baris berbasis instruksi. Atas keputusan penulis, ambangnya
 dibiarkan sampai ada tulisan informal kedua.
+
+**Catatan pengukuran kelima belas sampai ketujuh belas (18 November 2026).** Satu teks uji
+tentang baterai nuklir ditulis Claude tanpa skill, lalu disunting dengan skill yang sama di
+Gemini dan di Claude. Ketiganya dipindai dengan 4.1m. Suntingan Gemini menghapus keenam AI
+pattern dan meluluskan seluruh metrik, tetapi skornya naik dari AI 72 ke 88 persen dengan
+subkelas tetap *pure_ai*. Suntingan Claude juga nol AI pattern dan lulus seluruh metrik,
+dan skornya turun ke AI 29 persen dengan subkelas *mixed* jenis *concatenated*, artinya
+detektor melihat campuran bagian manusia dan bagian AI. Karena aturannya sama, selisih 88
+lawan 29 persen berasal dari cara model menjalankan aturan itu. Paket Gemini memakai
+`INSTRUKSI.md` versi ringkas, dan Gemini menambah klaim yang tidak ada di naskah,
+menurunkan konektor sampai 0,15 per 100 kata, mengganti kalimat berpenghubung dengan
+nominalisasi, dan menambah kalimat penutup yang mengulang isi paragraf.
+
+Rincian per kalimat suntingan Claude memperlihatkan dua hal. Kalimat paling manusiawi
+adalah dua kalimat berpenghubung, *Karena itu, baterai nuklir cocok dipakai pada ...*
+(dampak human 0,18) dan *Selain umurnya yang panjang, baterai nuklir juga andal di
+lingkungan ekstrem.* (0,14). Ini pengukuran ketiga yang mendukung bagian 2.15
+`voice-prib-id.md`. Kemudian, tujuh paragraf berpeluang AI 0,00, sedangkan paragraf
+mekanisme betavoltaik dan paragraf pengumuman BV100 dan UKAEA tetap 0,87, seperti
+diuraikan pada butir 6 Langkah 5c.
 
 Daftar lengkap hipotesis yang sudah diuji dan gugur ada di bagian 6
 `references/voice-prib-id.md`. Tidak ada resep andal untuk menaikkan skor. Yang ada
