@@ -114,7 +114,8 @@ dilaporkan jika benar-benar dihitung. Jika skrip tidak dapat dijalankan, metrik 
 Video tutorial pemasangan, dari mengunduh ZIP di halaman rilis sampai uji pertama:
 
 - [Tutorial Penggunaan Humanizer Indonesia di ChatGPT](https://youtu.be/1m0B6j2egko)
-- [Tutorial Penggunaan Humanizer Indonesia di Gemini](https://youtu.be/5NclZSGfZfk) (masih memakai Gem; langkah skill ada di `portable/README.md`)
+- [Tutorial Pemasangan Humanizer Indonesia di Gemini melalui Skill](https://youtu.be/8lhmU4xAt1g) (versi 1.7.2)
+- [Tutorial Penggunaan Humanizer Indonesia di Gemini melalui Gem](https://youtu.be/5NclZSGfZfk) (untuk akun yang Gem-nya belum dipindahkan ke skill)
 
 ## Cara memakai
 
